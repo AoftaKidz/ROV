@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UIBetText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UIBetText
+  m_TableCollectionNameGuidString: 34d3141a63de50f42ad5c0fd9da6dd14
+  m_Entries:
+  - m_Id: 17818091520
+    m_Key: bettitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321913520128
+    m_Key: betsize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 382781259776
+    m_Key: betlevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 457276293120
+    m_Key: betline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 543976751104
+    m_Key: bettotal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4796669657088
+    m_Key: betmax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4887463755776
+    m_Key: betconfirm
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6235527325748822020
+  references:
+    version: 2
+    RefIds:
+    - rid: 6235527325748822020
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1677823954727

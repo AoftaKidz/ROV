@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SpinButton
+  - WildTall
+  - SlotColumn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Puzzle
+  - Water
+  - UI
+  - SpinButton
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: frame
+    uniqueID: 2034897053
+    locked: 0
+  - name: Puzzle
+    uniqueID: 2984472989
+    locked: 0
+  - name: Wild
+    uniqueID: 1745464115
+    locked: 0
+  - name: SlotColumn
+    uniqueID: 3034824985
+    locked: 0
+  - name: Design
+    uniqueID: 350541021
+    locked: 0
+  - name: foreground
+    uniqueID: 389457285
+    locked: 0

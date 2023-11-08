@@ -1,0 +1,132 @@
+
+Wild_Expand.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Arm L1
+  rotate: false
+  xy: 293, 615
+  size: 148, 97
+  orig: 153, 104
+  offset: 0, 7
+  index: -1
+Arm L2
+  rotate: true
+  xy: 823, 791
+  size: 51, 161
+  orig: 77, 161
+  offset: 0, 0
+  index: -1
+Arm R
+  rotate: false
+  xy: 1071, 1483
+  size: 98, 273
+  orig: 128, 439
+  offset: 25, 0
+  index: -1
+Board
+  rotate: false
+  xy: 2, 714
+  size: 513, 1319
+  orig: 525, 1341
+  offset: 1, 11
+  index: -1
+Body
+  rotate: false
+  xy: 2, 351
+  size: 205, 361
+  orig: 205, 430
+  offset: 0, 17
+  index: -1
+Eye1 L
+  rotate: false
+  xy: 1171, 1688
+  size: 73, 68
+  orig: 84, 70
+  offset: 10, 2
+  index: -1
+Eye1 R
+  rotate: false
+  xy: 1320, 1845
+  size: 71, 66
+  orig: 82, 76
+  offset: 8, 5
+  index: -1
+Eye2 L
+  rotate: false
+  xy: 209, 353
+  size: 67, 55
+  orig: 206, 76
+  offset: 119, 13
+  index: -1
+Eye2 R
+  rotate: false
+  xy: 1483, 1979
+  size: 64, 54
+  orig: 111, 76
+  offset: 41, 8
+  index: -1
+Head
+  rotate: false
+  xy: 1071, 1758
+  size: 247, 275
+  orig: 295, 448
+  offset: 0, 173
+  index: -1
+Leg L
+  rotate: false
+  xy: 209, 410
+  size: 82, 302
+  orig: 92, 302
+  offset: 0, 0
+  index: -1
+Leg R
+  rotate: true
+  xy: 517, 748
+  size: 94, 304
+  orig: 94, 304
+  offset: 0, 0
+  index: -1
+Move
+  rotate: false
+  xy: 517, 844
+  size: 552, 1189
+  orig: 598, 1207
+  offset: 25, 17
+  index: -1
+Wild
+  rotate: true
+  xy: 2, 33
+  size: 316, 153
+  orig: 321, 156
+  offset: 1, 2
+  index: -1
+ass
+  rotate: false
+  xy: 1320, 1913
+  size: 161, 120
+  orig: 161, 462
+  offset: 0, 1
+  index: -1
+finger
+  rotate: true
+  xy: 2, 2
+  size: 29, 44
+  orig: 35, 44
+  offset: 6, 0
+  index: -1
+mouth down
+  rotate: true
+  xy: 1071, 1377
+  size: 104, 60
+  orig: 107, 60
+  offset: 3, 0
+  index: -1
+mouth top
+  rotate: true
+  xy: 157, 245
+  size: 104, 45
+  orig: 108, 64
+  offset: 4, 19
+  index: -1

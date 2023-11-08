@@ -1,0 +1,34 @@
+
+Btn_Spin.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Btn_Spin_Arrows
+  rotate: false
+  xy: 705, 713
+  size: 265, 257
+  orig: 267, 259
+  offset: 1, 1
+  index: -1
+Btn_Spin_Arrows_Speed
+  rotate: false
+  xy: 436, 711
+  size: 267, 259
+  orig: 269, 261
+  offset: 1, 1
+  index: -1
+Button
+  rotate: false
+  xy: 2, 140
+  size: 396, 396
+  orig: 398, 398
+  offset: 1, 1
+  index: -1
+Ellipse25
+  rotate: false
+  xy: 2, 538
+  size: 432, 432
+  orig: 439, 439
+  offset: 4, 3
+  index: -1

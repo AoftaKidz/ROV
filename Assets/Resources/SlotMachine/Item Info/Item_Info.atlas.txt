@@ -1,0 +1,90 @@
+
+Item_Info.png
+size: 2048, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Board
+  rotate: false
+  xy: 2, 504
+  size: 551, 347
+  orig: 561, 357
+  offset: 5, 5
+  index: -1
+Brain
+  rotate: false
+  xy: 1318, 171
+  size: 355, 217
+  orig: 357, 219
+  offset: 1, 1
+  index: -1
+Candles
+  rotate: false
+  xy: 2, 255
+  size: 389, 247
+  orig: 396, 261
+  offset: 6, 5
+  index: -1
+Creepy1
+  rotate: false
+  xy: 2, 2
+  size: 369, 251
+  orig: 371, 253
+  offset: 1, 1
+  index: -1
+Creepy2
+  rotate: false
+  xy: 945, 386
+  size: 371, 228
+  orig: 374, 231
+  offset: 2, 1
+  index: -1
+Creepy3
+  rotate: true
+  xy: 1717, 487
+  size: 364, 235
+  orig: 371, 238
+  offset: 6, 1
+  index: -1
+Creepy4
+  rotate: false
+  xy: 1331, 619
+  size: 384, 232
+  orig: 386, 234
+  offset: 1, 1
+  index: -1
+Creepy5
+  rotate: false
+  xy: 931, 154
+  size: 369, 230
+  orig: 371, 232
+  offset: 1, 1
+  index: -1
+DollHead
+  rotate: false
+  xy: 1331, 390
+  size: 372, 227
+  orig: 376, 231
+  offset: 3, 3
+  index: -1
+Finger
+  rotate: false
+  xy: 555, 614
+  size: 388, 237
+  orig: 395, 249
+  offset: 6, 5
+  index: -1
+Knife
+  rotate: false
+  xy: 945, 616
+  size: 384, 235
+  orig: 392, 248
+  offset: 7, 6
+  index: -1
+Tooth
+  rotate: false
+  xy: 555, 371
+  size: 374, 241
+  orig: 380, 253
+  offset: 5, 7
+  index: -1

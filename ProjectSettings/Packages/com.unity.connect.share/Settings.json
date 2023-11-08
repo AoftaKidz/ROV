@@ -1,0 +1,26 @@
+{
+    "m_Dictionary": {
+        "m_DictionaryValues": [
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "buildOutputDirList",
+                "value": "{\"m_Value\":\"D:/Work/Unity/Creepy Guy/Deploy/public;D:/Work/Unity/MeowSlug/Deploy/public;C:/Games/Devs/unity/MeowSlug_Deploy/public;C:/Users/aof_m/OneDrive/Documents/MeowSlug_Web/WebGL Builds;C:/Games/Devs/unity/MeowSlug_Deploy;C:/Project-Unity/SlotGame-Unity/build;C:/Games/Devs/unity/SlotGame_deploy;;;\"}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "createDefaultBuildsFolder",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "firstTime",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "autoPublish",
+                "value": "{\"m_Value\":true}"
+            }
+        ]
+    }
+}

@@ -1,0 +1,304 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UIRuleText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UIRuleText
+  m_TableCollectionNameGuidString: 4fc90d14ca24f9e43b77ad1c38bd5adf
+  m_Entries:
+  - m_Id: 15607693312
+    m_Key: title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19036382068736
+    m_Key: wildsymbol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19220155498496
+    m_Key: scattersymbol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19344340451328
+    m_Key: freespin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19504697081856
+    m_Key: winningbetlines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19605326823424
+    m_Key: rules
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26202199457792
+    m_Key: wild
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53977455165440
+    m_Key: wild2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54968313348096
+    m_Key: scatter1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55058272780288
+    m_Key: scatter2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56099466805248
+    m_Key: freespintext1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56220266954752
+    m_Key: freespintext2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56424810577920
+    m_Key: freespintext3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56541315760128
+    m_Key: freespintext4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56795557691392
+    m_Key: freespintext5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56837160992768
+    m_Key: freespintext6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56856928747520
+    m_Key: freespintext7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61127636189184
+    m_Key: ruletext0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61208665948160
+    m_Key: ruletext1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61225950674944
+    m_Key: ruletext2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61237891858432
+    m_Key: ruletext3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61252123131904
+    m_Key: ruletext4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61265372938240
+    m_Key: ruletext5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61281047052288
+    m_Key: ruletext6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61300072415232
+    m_Key: ruletext7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61315742334976
+    m_Key: ruletext8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61332624408576
+    m_Key: ruletext9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61346943762432
+    m_Key: ruletext10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61417072525312
+    m_Key: ruletext11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61429458305024
+    m_Key: ruletext12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67652366794752
+    m_Key: maingametext0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68391096975360
+    m_Key: maingametitle1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68448609271808
+    m_Key: maingametitle2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68461292847104
+    m_Key: maingametitle3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68474446184448
+    m_Key: maingametitle4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68484982276096
+    m_Key: maingametitle5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68496491446272
+    m_Key: maingametitle6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68600443076608
+    m_Key: maingametitle7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68621209075712
+    m_Key: maingametitle8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68638091149312
+    m_Key: maingametitle9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69801154871296
+    m_Key: maingame1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69987281305600
+    m_Key: maingame2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70121163489280
+    m_Key: maingame2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70201090146304
+    m_Key: maingame3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70278802210816
+    m_Key: maingame4_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70356275200000
+    m_Key: maingame5_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70421471461376
+    m_Key: maingame6_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70491537309696
+    m_Key: maingame7_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70568309850112
+    m_Key: maingame7_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70676757774336
+    m_Key: maingame7_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70773126103040
+    m_Key: maingame7_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70966869393408
+    m_Key: maingame7_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71170511241216
+    m_Key: maingame8_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71286307586048
+    m_Key: maingame8_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71353852657664
+    m_Key: maingame8_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71414284189696
+    m_Key: maingame8_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71479576920064
+    m_Key: maingame8_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71571084050432
+    m_Key: maingame9_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79871246761984
+    m_Key: settingtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79923553927168
+    m_Key: settingtitle1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80115250397184
+    m_Key: settingtitle2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80126864424960
+    m_Key: settingtitle3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80140047122432
+    m_Key: settingtitle4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80151724064768
+    m_Key: settingtitle5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80336105668608
+    m_Key: settingtext1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80452304666624
+    m_Key: settingtext2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80503580033024
+    m_Key: settingtext3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80555723620352
+    m_Key: settingtext4_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80624514400256
+    m_Key: settingtext5_1
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6235527280593731615
+  references:
+    version: 2
+    RefIds:
+    - rid: 6235527280593731615
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1677647640059

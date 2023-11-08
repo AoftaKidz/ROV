@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Chinese (Simplified) (zh-CN)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Chinese (Simplified) (zh-CN)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7d79be6aec83dec4793ba7b55fa8f73e
+  m_SerializeEntries:
+  - m_GUID: 819b8ccc8ba0384418a59497822554ab
+    m_Address: UIRuleText_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27c22af347f1a544b88d981776ddedc2
+    m_Address: UIBetText_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 480da6bfb18a006468764f873578e1cf
+    m_Address: UIWalletPopup_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c2fad87fbb2819438aa0b5ecd6adc90
+    m_Address: UISetting_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47830381fc2b1704987f6e8c861aad6c
+    m_Address: UIAutoSpinPopup_zh-CN
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-CN
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: e6959134ece1d854b9eade3c02f5a686, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d993f35ca663ef649a8ccf3850d95920, type: 2}
+    - {fileID: 11400000, guid: d45fe6deeb38eab47b3010148b5b3f5c, type: 2}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!612988286 &1
+SpriteAtlasAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 2
+  m_MasterAtlas: {fileID: 0}
+  m_ImporterData:
+    packables:
+    - {fileID: 2800000, guid: f4b58af7b1756374b87cc2cb43a3eefe, type: 3}
+    - {fileID: 2800000, guid: 49b3cb6daea47354fbebc627c988381b, type: 3}
+    - {fileID: 2800000, guid: c8a85e3c37f3afb43acba443a833f735, type: 3}
+    - {fileID: 2800000, guid: fe8f2c5b0bbb1d646b7f6fb97e9b0b6a, type: 3}
+    - {fileID: 2800000, guid: 40eaeb87e4ca3d5438441ce8baa1eee2, type: 3}
+    - {fileID: 2800000, guid: beba9a6513a3bd54cad6abbff74e7464, type: 3}
+    - {fileID: 2800000, guid: 5e6e1e4ed8586f048baae0eeb2b4c744, type: 3}
+    - {fileID: 2800000, guid: 5c88027ba2b6aec4aa0abf4167cd1e4f, type: 3}
+    - {fileID: 2800000, guid: 76c707021ab0dec41ac59d77ae090694, type: 3}
+    - {fileID: 21300000, guid: 76c707021ab0dec41ac59d77ae090694, type: 3}
+    - {fileID: 2800000, guid: 17eb1166638c1c54b96a5ef36fddbac4, type: 3}
+    - {fileID: 2800000, guid: 0c913ffbdcb326d4e939ca86bc9d7ac0, type: 3}
+    - {fileID: 2800000, guid: b45abf5e6330a4a42a77415a9b51d9aa, type: 3}
+    - {fileID: 2800000, guid: 90eb911eb735cda4cae6de0429bf74d7, type: 3}
+    - {fileID: 2800000, guid: 5a79ab0565e5e7f4c88f632d0f019b0f, type: 3}
+    - {fileID: 2800000, guid: 674bc3e96cc6711479fa8657b4136922, type: 3}
+    - {fileID: 2800000, guid: 75003b7cdd3c37e46b927713861516a5, type: 3}
+    - {fileID: 2800000, guid: 9a93152a51ecb9941bfea9ce819172f0, type: 3}
+    - {fileID: 2800000, guid: a134a4887e033da43bdd3b8476e73de2, type: 3}
+    - {fileID: 2800000, guid: 9e0dfdb47bb9b7d4a827eba902df2b76, type: 3}
+    - {fileID: 2800000, guid: 55d021d701875d24c8b0a0a6bb7003dd, type: 3}
+    - {fileID: 2800000, guid: 3492776e2e9926e4fa05b454f130240d, type: 3}
+    - {fileID: 2800000, guid: 58fd701f69bed384f8c4f3538f11c8cd, type: 3}
+  m_IsVariant: 0

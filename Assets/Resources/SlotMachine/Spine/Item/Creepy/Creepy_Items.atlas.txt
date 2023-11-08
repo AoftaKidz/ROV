@@ -1,0 +1,727 @@
+
+Creepy_Items.png
+size: 2048, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+BG-collectable
+  rotate: true
+  xy: 1577, 757
+  size: 265, 314
+  orig: 271, 320
+  offset: 3, 3
+  index: -1
+BG-scatter
+  rotate: true
+  xy: 939, 750
+  size: 272, 318
+  orig: 279, 327
+  offset: 4, 4
+  index: -1
+Brain/Head
+  rotate: true
+  xy: 1761, 391
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: -1
+Brain/base
+  rotate: true
+  xy: 527, 394
+  size: 134, 105
+  orig: 134, 105
+  offset: 0, 0
+  index: -1
+Brain/brain
+  rotate: false
+  xy: 997, 248
+  size: 116, 112
+  orig: 116, 112
+  offset: 0, 0
+  index: -1
+Brain/button
+  rotate: true
+  xy: 363, 650
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: -1
+Brain/eye L
+  rotate: false
+  xy: 1394, 3
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+Brain/eye R
+  rotate: true
+  xy: 1356, 2
+  size: 40, 36
+  orig: 40, 36
+  offset: 0, 0
+  index: -1
+Brain/glass
+  rotate: false
+  xy: 1207, 376
+  size: 137, 146
+  orig: 137, 146
+  offset: 0, 0
+  index: -1
+Brain/handle L
+  rotate: false
+  xy: 1346, 231
+  size: 120, 141
+  orig: 121, 141
+  offset: 0, 0
+  index: -1
+Brain/handle R
+  rotate: false
+  xy: 1115, 358
+  size: 90, 175
+  orig: 90, 175
+  offset: 0, 0
+  index: -1
+Candles/Candle 1
+  rotate: false
+  xy: 1893, 741
+  size: 130, 180
+  orig: 130, 180
+  offset: 0, 0
+  index: -1
+Candles/Candle 2
+  rotate: false
+  xy: 1476, 131
+  size: 82, 103
+  orig: 82, 103
+  offset: 0, 0
+  index: -1
+Candles/Candle 3
+  rotate: true
+  xy: 1614, 102
+  size: 77, 79
+  orig: 77, 79
+  offset: 0, 0
+  index: -1
+Candles/Flame 1
+  rotate: true
+  xy: 1476, 72
+  size: 57, 82
+  orig: 57, 82
+  offset: 0, 0
+  index: -1
+Candles/Flame 2
+  rotate: false
+  xy: 1693, 269
+  size: 39, 75
+  orig: 39, 75
+  offset: 0, 0
+  index: -1
+Candles/Flame 3
+  rotate: false
+  xy: 1695, 97
+  size: 37, 79
+  orig: 37, 79
+  offset: 0, 0
+  index: -1
+Collectable
+  rotate: false
+  xy: 334, 676
+  size: 301, 346
+  orig: 311, 356
+  offset: 4, 5
+  index: -1
+Collectable/Body
+  rotate: false
+  xy: 1860, 364
+  size: 180, 192
+  orig: 180, 206
+  offset: 0, 0
+  index: -1
+Collectable/Head
+  rotate: false
+  xy: 308, 382
+  size: 217, 266
+  orig: 217, 299
+  offset: 0, 33
+  index: -1
+Collectable/arm1
+  rotate: true
+  xy: 1115, 251
+  size: 105, 132
+  orig: 105, 132
+  offset: 0, 0
+  index: -1
+Collectable/arm2
+  rotate: true
+  xy: 458, 12
+  size: 57, 148
+  orig: 76, 157
+  offset: 0, 0
+  index: -1
+Collectable/eye L
+  rotate: true
+  xy: 1731, 194
+  size: 59, 38
+  orig: 59, 38
+  offset: 0, 0
+  index: -1
+Collectable/eye R
+  rotate: false
+  xy: 1597, 494
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+Collectable/fingers
+  rotate: false
+  xy: 1734, 92
+  size: 45, 48
+  orig: 58, 77
+  offset: 0, 27
+  index: -1
+Collectable/glasses1
+  rotate: true
+  xy: 901, 295
+  size: 201, 94
+  orig: 215, 100
+  offset: 0, 0
+  index: -1
+Collectable/glasses2
+  rotate: false
+  xy: 1893, 923
+  size: 153, 99
+  orig: 259, 171
+  offset: 0, 72
+  index: -1
+Collectable/mouth
+  rotate: true
+  xy: 1560, 112
+  size: 122, 52
+  orig: 123, 116
+  offset: 0, 63
+  index: -1
+Collectable/thumb
+  rotate: true
+  xy: 1145, 2
+  size: 31, 59
+  orig: 40, 77
+  offset: 8, 10
+  index: -1
+Creepy1/Eye L
+  rotate: false
+  xy: 1769, 255
+  size: 31, 31
+  orig: 31, 31
+  offset: 0, 0
+  index: -1
+Creepy1/Eye R
+  rotate: false
+  xy: 1802, 256
+  size: 30, 30
+  orig: 30, 30
+  offset: 0, 0
+  index: -1
+Creepy1/Head
+  rotate: false
+  xy: 1346, 374
+  size: 112, 148
+  orig: 112, 148
+  offset: 0, 0
+  index: -1
+Creepy1/body
+  rotate: true
+  xy: 527, 530
+  size: 144, 108
+  orig: 144, 145
+  offset: 0, 0
+  index: -1
+Creepy1/crown
+  rotate: true
+  xy: 1537, 2
+  size: 68, 43
+  orig: 68, 45
+  offset: 0, 2
+  index: -1
+Creepy2/2Eye L
+  rotate: false
+  xy: 1771, 208
+  size: 45, 45
+  orig: 193, 125
+  offset: 38, 1
+  index: -1
+Creepy2/2Eye R
+  rotate: false
+  xy: 1419, 62
+  size: 55, 44
+  orig: 193, 117
+  offset: 64, 0
+  index: -1
+Creepy2/2Glasses
+  rotate: true
+  xy: 1090, 24
+  size: 79, 53
+  orig: 161, 180
+  offset: 0, 2
+  index: -1
+Creepy2/2Head
+  rotate: false
+  xy: 1468, 236
+  size: 122, 143
+  orig: 193, 148
+  offset: 36, 0
+  index: -1
+Creepy2/2arm 1
+  rotate: false
+  xy: 1228, 29
+  size: 54, 78
+  orig: 165, 220
+  offset: 0, 2
+  index: -1
+Creepy2/2arm 2
+  rotate: false
+  xy: 909, 519
+  size: 27, 83
+  orig: 193, 217
+  offset: 67, 0
+  index: -1
+Creepy2/2body
+  rotate: true
+  xy: 1648, 491
+  size: 101, 210
+  orig: 193, 288
+  offset: 76, 0
+  index: -1
+Creepy2/2fingers
+  rotate: true
+  xy: 334, 650
+  size: 24, 27
+  orig: 165, 158
+  offset: 0, 0
+  index: -1
+Creepy2/2mouth down
+  rotate: true
+  xy: 1734, 255
+  size: 51, 33
+  orig: 193, 148
+  offset: 74, 11
+  index: -1
+Creepy2/2mouth up
+  rotate: true
+  xy: 909, 604
+  size: 54, 28
+  orig: 193, 148
+  offset: 71, 21
+  index: -1
+Creepy2/2thumb
+  rotate: true
+  xy: 784, 2
+  size: 14, 29
+  orig: 150, 163
+  offset: 1, 0
+  index: -1
+Creepy3/Arm L
+  rotate: false
+  xy: 1695, 178
+  size: 34, 89
+  orig: 116, 154
+  offset: 82, 51
+  index: -1
+Creepy3/Body
+  rotate: true
+  xy: 1597, 390
+  size: 99, 162
+  orig: 124, 176
+  offset: 25, 3
+  index: -1
+Creepy3/Eye L1
+  rotate: false
+  xy: 1818, 222
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Creepy3/Eye L2
+  rotate: false
+  xy: 634, 467
+  size: 29, 29
+  orig: 39, 43
+  offset: 0, 0
+  index: -1
+Creepy3/Eye R
+  rotate: false
+  xy: 1727, 346
+  size: 43, 42
+  orig: 43, 42
+  offset: 0, 0
+  index: -1
+Creepy3/Hand
+  rotate: false
+  xy: 1249, 279
+  size: 95, 95
+  orig: 105, 155
+  offset: 8, 49
+  index: -1
+Creepy3/Head
+  rotate: false
+  xy: 987, 105
+  size: 131, 141
+  orig: 140, 144
+  offset: 5, 0
+  index: -1
+Creepy3/Mouth
+  rotate: false
+  xy: 1206, 2
+  size: 46, 25
+  orig: 46, 25
+  offset: 0, 0
+  index: -1
+Creepy4/body
+  rotate: true
+  xy: 1331, 108
+  size: 121, 143
+  orig: 121, 143
+  offset: 0, 0
+  index: -1
+Creepy4/head
+  rotate: false
+  xy: 1460, 381
+  size: 135, 147
+  orig: 138, 178
+  offset: 3, 29
+  index: -1
+Creepy4/lowerarm_L
+  rotate: false
+  xy: 1145, 35
+  size: 81, 72
+  orig: 81, 72
+  offset: 0, 0
+  index: -1
+Creepy4/lowerarm_R
+  rotate: false
+  xy: 1331, 44
+  size: 86, 62
+  orig: 86, 62
+  offset: 0, 0
+  index: -1
+Creepy4/mouth_bot
+  rotate: true
+  xy: 1284, 60
+  size: 61, 45
+  orig: 61, 45
+  offset: 0, 0
+  index: -1
+Creepy4/mouth_top
+  rotate: true
+  xy: 909, 660
+  size: 60, 28
+  orig: 60, 30
+  offset: 0, 2
+  index: -1
+Creepy4/upperarm_L
+  rotate: true
+  xy: 1772, 328
+  size: 61, 64
+  orig: 61, 64
+  offset: 0, 0
+  index: -1
+Creepy4/upperarm_R
+  rotate: true
+  xy: 1582, 4
+  size: 66, 61
+  orig: 73, 61
+  offset: 0, 0
+  index: -1
+Creepy5/Body
+  rotate: false
+  xy: 997, 362
+  size: 116, 171
+  orig: 190, 171
+  offset: 31, 0
+  index: -1
+Creepy5/Eye L
+  rotate: false
+  xy: 1781, 164
+  size: 42, 42
+  orig: 42, 42
+  offset: 0, 0
+  index: -1
+Creepy5/Eye R
+  rotate: false
+  xy: 1781, 123
+  size: 42, 39
+  orig: 42, 39
+  offset: 0, 0
+  index: -1
+Creepy5/Hand 1
+  rotate: false
+  xy: 912, 25
+  size: 176, 78
+  orig: 205, 93
+  offset: 29, 0
+  index: -1
+Creepy5/Hand 2 L
+  rotate: true
+  xy: 1772, 288
+  size: 38, 65
+  orig: 69, 90
+  offset: 31, 0
+  index: -1
+Creepy5/Hand 2 R
+  rotate: false
+  xy: 608, 2
+  size: 88, 48
+  orig: 205, 60
+  offset: 117, 0
+  index: -1
+Creepy5/Head
+  rotate: false
+  xy: 1120, 109
+  size: 132, 140
+  orig: 152, 142
+  offset: 20, 2
+  index: -1
+Creepy55
+  rotate: false
+  xy: 1208, 524
+  size: 216, 224
+  orig: 218, 226
+  offset: 1, 1
+  index: -1
+DollHead/Head
+  rotate: false
+  xy: 1426, 530
+  size: 220, 224
+  orig: 225, 227
+  offset: 5, 0
+  index: -1
+DollHead/black eye L
+  rotate: false
+  xy: 1437, 27
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+DollHead/black eye R
+  rotate: false
+  xy: 938, 500
+  size: 33, 33
+  orig: 33, 33
+  offset: 0, 0
+  index: -1
+DollHead/ear L
+  rotate: false
+  xy: 634, 421
+  size: 27, 44
+  orig: 27, 44
+  offset: 0, 0
+  index: -1
+DollHead/neck 1
+  rotate: false
+  xy: 1597, 346
+  size: 128, 42
+  orig: 128, 42
+  offset: 0, 0
+  index: -1
+DollHead/neck 2
+  rotate: false
+  xy: 784, 18
+  size: 113, 32
+  orig: 113, 32
+  offset: 0, 0
+  index: -1
+DollHead/white eye L
+  rotate: true
+  xy: 1476, 2
+  size: 68, 59
+  orig: 175, 136
+  offset: 3, 42
+  index: -1
+DollHead/white eye R
+  rotate: false
+  xy: 1614, 181
+  size: 79, 84
+  orig: 150, 139
+  offset: 53, 20
+  index: -1
+FX_Shine
+  rotate: false
+  xy: 637, 722
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+Finger/body
+  rotate: false
+  xy: 665, 256
+  size: 234, 240
+  orig: 234, 240
+  offset: 0, 0
+  index: -1
+Finger/nail
+  rotate: false
+  xy: 1592, 267
+  size: 99, 77
+  orig: 99, 77
+  offset: 0, 0
+  index: -1
+Frame-collectable
+  rotate: false
+  xy: 232, 27
+  size: 224, 270
+  orig: 226, 272
+  offset: 1, 1
+  index: -1
+Frame-scatter
+  rotate: true
+  xy: 637, 498
+  size: 222, 270
+  orig: 224, 272
+  offset: 1, 1
+  index: -1
+Frame_Effect
+  rotate: true
+  xy: 1259, 756
+  size: 266, 316
+  orig: 268, 318
+  offset: 1, 1
+  index: -1
+Knife/Layer 111
+  rotate: false
+  xy: 458, 71
+  size: 205, 246
+  orig: 205, 246
+  offset: 0, 0
+  index: -1
+SCATTER text
+  rotate: true
+  xy: 912, 105
+  size: 188, 73
+  orig: 190, 75
+  offset: 1, 1
+  index: -1
+Scatter
+  rotate: false
+  xy: 2, 650
+  size: 330, 372
+  orig: 344, 386
+  offset: 8, 6
+  index: -1
+Scatter/Body
+  rotate: true
+  xy: 546, 334
+  size: 58, 117
+  orig: 102, 117
+  offset: 19, 0
+  index: -1
+Scatter/Eye Center
+  rotate: false
+  xy: 1734, 308
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+Scatter/Eye L
+  rotate: true
+  xy: 1284, 2
+  size: 40, 70
+  orig: 44, 72
+  offset: 4, 0
+  index: -1
+Scatter/Eye R
+  rotate: false
+  xy: 1560, 72
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+Scatter/Head
+  rotate: false
+  xy: 1874, 558
+  size: 169, 181
+  orig: 169, 237
+  offset: 0, 56
+  index: -1
+Scatter/tongue
+  rotate: true
+  xy: 698, 2
+  size: 48, 84
+  orig: 56, 128
+  offset: 0, 17
+  index: -1
+Tooth/blood 1
+  rotate: false
+  xy: 1734, 142
+  size: 45, 50
+  orig: 45, 50
+  offset: 0, 0
+  index: -1
+Tooth/blood 2
+  rotate: false
+  xy: 1781, 89
+  size: 45, 32
+  orig: 45, 32
+  offset: 0, 0
+  index: -1
+Tooth/blood drop 1
+  rotate: true
+  xy: 1207, 358
+  size: 16, 15
+  orig: 16, 27
+  offset: 0, 0
+  index: -1
+Tooth/blood drop 2
+  rotate: false
+  xy: 1874, 741
+  size: 14, 14
+  orig: 14, 24
+  offset: 0, 0
+  index: -1
+Tooth/body
+  rotate: true
+  xy: 665, 52
+  size: 202, 245
+  orig: 202, 245
+  offset: 0, 0
+  index: -1
+Wild
+  rotate: false
+  xy: 2, 299
+  size: 304, 349
+  orig: 314, 359
+  offset: 5, 6
+  index: -1
+Wild_Frame
+  rotate: false
+  xy: 2, 24
+  size: 228, 273
+  orig: 228, 273
+  offset: 0, 0
+  index: -1
+Wild_Ghost
+  rotate: true
+  xy: 939, 535
+  size: 213, 267
+  orig: 213, 267
+  offset: 0, 0
+  index: -1
+Wild_Text
+  rotate: true
+  xy: 1254, 123
+  size: 154, 75
+  orig: 155, 75
+  offset: 0, 0
+  index: -1
+collect text
+  rotate: false
+  xy: 308, 319
+  size: 236, 61
+  orig: 236, 62
+  offset: 0, 1
+  index: -1
+fire effect overlay
+  rotate: false
+  xy: 1648, 594
+  size: 224, 161
+  orig: 226, 163
+  offset: 1, 1
+  index: -1
