@@ -8,13 +8,11 @@ public class FreeSpinAvatar : MonoBehaviour
     public static FreeSpinAvatar Instance;
     bool isAction = false;
     float time = 0;
-    private SkeletonAnimation spine;
 
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
-        spine = GetComponent<SkeletonAnimation>();
         PlayIdle();
         Debug.Log("Avatar Idle.");
 
@@ -22,7 +20,6 @@ public class FreeSpinAvatar : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        spine = GetComponent<SkeletonAnimation>();
         PlayIdle();
         Debug.Log("Avatar Awake.");
     }
@@ -39,12 +36,12 @@ public class FreeSpinAvatar : MonoBehaviour
     public void PlayIdle()
     {
         isAction = false;
-        spine.AnimationState.SetAnimation(0, "Creepy_Idle", true);
+        GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, "Creepy_Idle", true);
     }
     public void PlayWin()
     {
         time = 0;
         isAction = true;
-        spine.AnimationState.SetAnimation(0, "Creepy_Win", false);
+        GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, "Creepy_Win", false);
     }
 }

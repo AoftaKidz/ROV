@@ -56,7 +56,7 @@ public class Puzzle : MonoBehaviour
         // Spine
         if(spine){
             _spineAnimation = spine.GetComponent<SkeletonAnimation>();
-            _spineAnimation.AnimationState.SetAnimation(0, "Brain", true);
+            _spineAnimation.AnimationState.SetAnimation(0, "Item_1", true);
 
             //Random.seed(9999);
             dataID = Random.Range(0,10);

@@ -34,8 +34,8 @@ public class PuzzleInfo : MonoBehaviour
         spine.transform.localPosition = pos;
 
         spine.transform.DOKill();
-        spine.transform.localScale = new Vector2(0.5f, 0.5f);
-        spine.transform.DOScale(new Vector2(1, 1), 1).SetEase(Ease.OutElastic);
+        spine.transform.localScale = new Vector2(1, 1);
+        spine.transform.DOScale(new Vector2(1.5f, 1.5f), 1).SetEase(Ease.OutElastic);
     }
     public void Hide()
     {

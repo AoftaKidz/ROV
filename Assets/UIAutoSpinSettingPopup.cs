@@ -72,11 +72,11 @@ public class UIAutoSpinSettingPopup : MonoBehaviour
     }
     public void OnStart()
     {
-        startBalance = UserProfile.Instance.wallet;
+      /*  startBalance = UserProfile.Instance.wallet;
         decreaseBalanceStop = adjustDecBalanceStop.GetValue();
         increaseBalanceStop = adjustincBalanceStop.GetValue();
         rewardStop = adjustRewardStop.GetValue();
-        SlotMachineAutoSpin.Instance.StartAotuSpin(selectAutoSpin.GetComponent<UISelectAutoSpin>().GetValue());
+        SlotMachineAutoSpin.Instance.StartAotuSpin(selectAutoSpin.GetComponent<UISelectAutoSpin>().GetValue());*/
 
         Hide();
     }

@@ -59,17 +59,17 @@ public class SlotMachine : MonoBehaviour
     float _cooldownTime = 0;
     public enum SlotMachineID
     {
-                Puzzle_Creepy1 = 0,
-                Puzzle_Creepy2,
-                Puzzle_Creepy3,
-                Puzzle_Creepy4,
-                Puzzle_Creepy5,
-                Puzzle_Brain,//A
-                Puzzle_Candles,//K
-                Puzzle_DollHead,//Q
-                Puzzle_Finger,//J
-                Puzzle_Knife,//10
-                Puzzle_Tooth,//9
+                Puzzle_1 = 0,
+                Puzzle_2,
+                Puzzle_3,
+                Puzzle_4,
+                Puzzle_5,
+                Puzzle_A,//A
+                Puzzle_K,//K
+                Puzzle_Q,//Q
+                Puzzle_J,//J
+                Puzzle_10,//10
+                Puzzle_9,//9
                 Puzzle_Wild,
                 Puzzle_Scatter,
                 Puzzle_Collectable
@@ -143,32 +143,32 @@ public class SlotMachine : MonoBehaviour
     {
         switch (index)
         {
-             /*Puzzle_Creepy1 = 0,
-                Puzzle_Creepy2,
-                Puzzle_Creepy3,
-                Puzzle_Creepy4,
-                Puzzle_Creepy5,
-                Puzzle_Brain,//A
-                Puzzle_Candles,//K
-                Puzzle_DollHead,//Q
-                Puzzle_Finger,//J
-                Puzzle_Knife,//10
-                Puzzle_Tooth,//9
+             /*Puzzle_1 = 0,
+                Puzzle_2,
+                Puzzle_3,
+                Puzzle_4,
+                Puzzle_5,
+                Puzzle_A,//A
+                Puzzle_K,//K
+                Puzzle_Q,//Q
+                Puzzle_J,//J
+                Puzzle_10,//10
+                Puzzle_9,//9
                 Puzzle_Wild,
                 Puzzle_Scatter,
                 Puzzle_Collectable*/
 
-            case (int)SlotMachineID.Puzzle_Brain: return "Brain";
-            case (int)SlotMachineID.Puzzle_Finger: return "Finger";
-            case (int)SlotMachineID.Puzzle_Candles: return "Candles";
-            case (int)SlotMachineID.Puzzle_DollHead: return "DollHead";
-            case (int)SlotMachineID.Puzzle_Tooth: return "Tooth";
-            case (int)SlotMachineID.Puzzle_Knife: return "Knife";
-            case (int)SlotMachineID.Puzzle_Creepy1: return "Creepy1";
-            case (int)SlotMachineID.Puzzle_Creepy2: return "Creepy2";
-            case (int)SlotMachineID.Puzzle_Creepy3: return "Creepy3";
-            case (int)SlotMachineID.Puzzle_Creepy4: return "Creepy4";
-            case (int)SlotMachineID.Puzzle_Creepy5: return "Creepy5";
+            case (int)SlotMachineID.Puzzle_A: return "Item_A";
+            case (int)SlotMachineID.Puzzle_K: return "Item_K";
+            case (int)SlotMachineID.Puzzle_Q: return "Item_Q";
+            case (int)SlotMachineID.Puzzle_J: return "Item_J";
+            case (int)SlotMachineID.Puzzle_10: return "Item_10";
+            case (int)SlotMachineID.Puzzle_9: return "Item_9";
+            case (int)SlotMachineID.Puzzle_1: return "Item_1";
+            case (int)SlotMachineID.Puzzle_2: return "Item_2";
+            case (int)SlotMachineID.Puzzle_3: return "Item_3";
+            case (int)SlotMachineID.Puzzle_4: return "Item_4";
+            case (int)SlotMachineID.Puzzle_5: return "Item_5";
             case (int)SlotMachineID.Puzzle_Scatter: return "Scatter";
             case (int)SlotMachineID.Puzzle_Wild: return "Wild";
             case (int)SlotMachineID.Puzzle_Collectable: return "Collectable";
@@ -180,17 +180,17 @@ public class SlotMachine : MonoBehaviour
     {
         switch (index)
         {
-            case (int)SlotMachineID.Puzzle_Brain: return "Brain_Match";
-            case (int)SlotMachineID.Puzzle_Finger: return "Finger_Match";
-            case (int)SlotMachineID.Puzzle_Candles: return "Candles_Match";
-            case (int)SlotMachineID.Puzzle_DollHead: return "DollHead_Match";
-            case (int)SlotMachineID.Puzzle_Tooth: return "Tooth_Match";
-            case (int)SlotMachineID.Puzzle_Knife: return "Knife_Match";
-            case (int)SlotMachineID.Puzzle_Creepy1: return "Creepy1_Match";
-            case (int)SlotMachineID.Puzzle_Creepy2: return "Creepy2_Match";
-            case (int)SlotMachineID.Puzzle_Creepy3: return "Creepy3_Match";
-            case (int)SlotMachineID.Puzzle_Creepy4: return "Creepy4_Match";
-            case (int)SlotMachineID.Puzzle_Creepy5: return "Creepy5_Match";
+            case (int)SlotMachineID.Puzzle_A: return "Item_A_Match";
+            case (int)SlotMachineID.Puzzle_K: return "Item_K_Match";
+            case (int)SlotMachineID.Puzzle_Q: return "Item_Q_Match";
+            case (int)SlotMachineID.Puzzle_J: return "Item_J_Match";
+            case (int)SlotMachineID.Puzzle_10: return "Item_10_Match";
+            case (int)SlotMachineID.Puzzle_9: return "Item_9_Match";
+            case (int)SlotMachineID.Puzzle_1: return "Item_1_Match";
+            case (int)SlotMachineID.Puzzle_2: return "Item_2_Match";
+            case (int)SlotMachineID.Puzzle_3: return "Item_3_Match";
+            case (int)SlotMachineID.Puzzle_4: return "Item_4_Match";
+            case (int)SlotMachineID.Puzzle_5: return "Item_5_Match";
             case (int)SlotMachineID.Puzzle_Scatter: return "Scatter_Match";
             case (int)SlotMachineID.Puzzle_Wild: return "Wild_Match";
             case (int)SlotMachineID.Puzzle_Collectable: return "Collectable_Match";
@@ -202,17 +202,17 @@ public class SlotMachine : MonoBehaviour
     {
         switch (index)
         {
-            case (int)SlotMachineID.Puzzle_Brain: return "Brain";
-            case (int)SlotMachineID.Puzzle_Finger: return "Finger";
-            case (int)SlotMachineID.Puzzle_Candles: return "Candles";
-            case (int)SlotMachineID.Puzzle_DollHead: return "DollHead";
-            case (int)SlotMachineID.Puzzle_Tooth: return "Tooth";
-            case (int)SlotMachineID.Puzzle_Knife: return "Knife";
-            case (int)SlotMachineID.Puzzle_Creepy1: return "Creepy1";
-            case (int)SlotMachineID.Puzzle_Creepy2: return "Creepy2";
-            case (int)SlotMachineID.Puzzle_Creepy3: return "Creepy3";
-            case (int)SlotMachineID.Puzzle_Creepy4: return "Creepy4";
-            case (int)SlotMachineID.Puzzle_Creepy5: return "Creepy5";
+            case (int)SlotMachineID.Puzzle_A: return "Item_A";
+            case (int)SlotMachineID.Puzzle_K: return "Item_K";
+            case (int)SlotMachineID.Puzzle_Q: return "Item_Q";
+            case (int)SlotMachineID.Puzzle_J: return "Item_J";
+            case (int)SlotMachineID.Puzzle_10: return "Item_10";
+            case (int)SlotMachineID.Puzzle_9: return "Item_9";
+            case (int)SlotMachineID.Puzzle_1: return "Item_1";
+            case (int)SlotMachineID.Puzzle_2: return "Item_2";
+            case (int)SlotMachineID.Puzzle_3: return "Item_3";
+            case (int)SlotMachineID.Puzzle_4: return "Item_4";
+            case (int)SlotMachineID.Puzzle_5: return "Item_5";
             case (int)SlotMachineID.Puzzle_Scatter: return "Scatter";
             case (int)SlotMachineID.Puzzle_Wild: return "Wild";
             case (int)SlotMachineID.Puzzle_Collectable: return "Collectable";
@@ -228,6 +228,8 @@ public class SlotMachine : MonoBehaviour
         }
         else
         {
+            return;
+
             isSpinning = true;
             OnSlotColumnPreSpin?.Invoke();
             //StartCoroutine(ServiceManager.Instance.Spin(SpinSuccess, SpinFailed));
@@ -362,7 +364,7 @@ public class SlotMachine : MonoBehaviour
 /*            slotData.isScatterMode = true;
             slotData.comingFreeSpinCount = 5;
             slotData.wildSpawnIndex = UnityEngine.Random.Range(0, 14);*/
-            if (slotData.isScatterMode)
+          /*  if (slotData.isScatterMode)
             {
                 int scatterCount = 0;
                 //Continue scatter mode
@@ -381,7 +383,7 @@ public class SlotMachine : MonoBehaviour
                 scatterCount = scatterCount + num;
                 
                 UIFreeSpinPopup.Instance.Show(scatterCount);
-            }
+            }*/
         }
     }
     void SpinFailed(string result)
