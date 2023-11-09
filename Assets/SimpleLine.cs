@@ -35,10 +35,10 @@ public class SimpleLine : MonoBehaviour
             if (c == 0)
             {
                 //First
-                Vector3 startP = new Vector3(p.x - 1.9f, p.y, p.z);
+                Vector3 startP = new Vector3(p.x - 3f, p.y, p.z);
                 line.SetPosition(c, startP);
                 if (number < 10)
-                    tagNumber.transform.position = startP;
+                    tagNumber.transform.position = new Vector3(p.x - 1.4f, p.y, p.z);
             }
 
             c++;
@@ -48,10 +48,10 @@ public class SimpleLine : MonoBehaviour
             {
                 //Last
                 c++;
-                Vector3 endP = new Vector3(p.x + 1.9f, p.y, p.z);
+                Vector3 endP = new Vector3(p.x + 3, p.y, p.z);
                 line.SetPosition(c, endP);
                 if (number >= 10)
-                    tagNumber.transform.position = endP;
+                    tagNumber.transform.position = new Vector3(p.x + 1.5f, p.y, p.z);
             }
         }
 

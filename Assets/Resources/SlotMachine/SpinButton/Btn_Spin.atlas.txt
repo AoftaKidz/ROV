@@ -4,31 +4,45 @@ size: 1024, 1024
 format: RGBA8888
 filter: Linear, Linear
 repeat: none
-Btn_Spin_Arrows
+Btn_Spin1
   rotate: false
-  xy: 705, 713
-  size: 265, 257
-  orig: 267, 259
-  offset: 1, 1
+  xy: 2, 563
+  size: 598, 453
+  orig: 598, 456
+  offset: 0, 3
   index: -1
-Btn_Spin_Arrows_Speed
+Compass
   rotate: false
-  xy: 436, 711
-  size: 267, 259
-  orig: 269, 261
-  offset: 1, 1
+  xy: 436, 281
+  size: 278, 280
+  orig: 278, 281
+  offset: 0, 0
   index: -1
-Button
+Cover
   rotate: false
-  xy: 2, 140
-  size: 396, 396
-  orig: 398, 398
-  offset: 1, 1
+  xy: 602, 569
+  size: 414, 447
+  orig: 414, 450
+  offset: 0, 3
   index: -1
 Ellipse25
   rotate: false
-  xy: 2, 538
+  xy: 2, 129
   size: 432, 432
   orig: 439, 439
   offset: 4, 3
+  index: -1
+Spin_Arrows
+  rotate: false
+  xy: 436, 77
+  size: 207, 202
+  orig: 215, 208
+  offset: 4, 1
+  index: -1
+Spin_Arrows_Speed
+  rotate: false
+  xy: 716, 364
+  size: 208, 203
+  orig: 215, 208
+  offset: 4, 0
   index: -1

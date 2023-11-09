@@ -61,7 +61,7 @@ Material:
     m_Colors:
     - _Color: {r: 6.5243835, g: 1.4402882, b: 1.4402882, a: 0}
     - _ColorEffect: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorLine: {r: 0.454902, g: 1, b: 0.8705883, a: 1}
+    - _ColorLine: {r: 0.7803922, g: 0.7019608, b: 0.53333336, a: 1}
     - _EffectSpeed: {r: -1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4130104853359456573
