@@ -208,12 +208,12 @@ public class SlotMachineScatterMode : MonoBehaviour
                 {
                     if(!UIKindOfMeowPopup.Instance.Appear() && !UIBigWinPopup.Instance.Appear() && !UIRoundRewardPopup.Instance.Appear())
                     _time += Time.deltaTime;
-                    float delay = 3;
-                    foreach (int d in SlotMachine.Instance.slotData.data)
+                    float delay = 1;
+                    /*foreach (int d in SlotMachine.Instance.slotData.data)
                     {
                         if (d == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
                             delay = 6;
-                    }
+                    }*/
 
                     if (_time > delay)
                     {

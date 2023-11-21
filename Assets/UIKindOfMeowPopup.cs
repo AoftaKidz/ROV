@@ -116,6 +116,7 @@ public class UIKindOfMeowPopup : MonoBehaviour
     }
     public bool Condition()
     {
+        return false;
         if (SlotMachine.Instance == null) return false;
         if (SlotMachine.Instance.slotData == null) return false;
         if (SlotMachine.Instance.slotData.reward == 0) return false;

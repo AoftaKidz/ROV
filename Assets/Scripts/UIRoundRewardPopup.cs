@@ -86,15 +86,14 @@ public class UIRoundRewardPopup : MonoBehaviour
         if (SlotMachine.Instance.slotData.reward == 0)
         {
             //var format = "0.00";
-            customFont.SetText(0.00f);
-            //txtRoundReward.text = SpriteNumberManager.ToMeowWhite(format);
+            //customFont.SetText(0.00f);
+            txtRoundReward.text = SpriteNumberManager.ToYellow((0.00f).ToString());
         }
         else
         {
-            //var format = string.Format("{0:#,#.00}", SlotMachine.Instance.slotData.reward);
-            customFont.SetText(SlotMachine.Instance.slotData.reward);
-
-            //txtRoundReward.text = SpriteNumberManager.ToMeowWhite(format);
+            var format = string.Format("{0:#,#.00}", SlotMachine.Instance.slotData.reward);
+            //customFont.SetText(SlotMachine.Instance.slotData.reward);
+            txtRoundReward.text = SpriteNumberManager.ToYellow(format);
         }
     }
     public void Show(float t = 0)

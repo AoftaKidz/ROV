@@ -35,7 +35,7 @@ public class DrawLine : MonoBehaviour
             Vector3 p = SlotMachine.activePuzzle.transform.position;
             p.y += offsetY;
             float offsetPos = 3.0f;
-            float tagOffsetPos = 2.0f;
+            float tagOffsetPos = 1.50f;
             if (c == 0)
             {
                 //First
@@ -56,7 +56,7 @@ public class DrawLine : MonoBehaviour
                 Vector3 endP = new Vector3(p.x + offsetPos, p.y, p.z);
                 _line.SetPosition(c, endP);
                 if (number >= 10)
-                    tagNumber.transform.position = new Vector3(p.x + 1.88f, p.y, p.z); ;
+                    tagNumber.transform.position = new Vector3(p.x + tagOffsetPos, p.y, p.z); ;
             }
         }
 

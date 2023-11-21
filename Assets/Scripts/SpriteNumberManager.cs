@@ -49,7 +49,7 @@ public class SpriteNumberManager : MonoBehaviour
         }
         return newNumber;
     }
-    public static string GetRedSprite(char c)
+    public static string GetYellowSprite(char c)
     {
         switch (c)
         {
@@ -97,18 +97,14 @@ public class SpriteNumberManager : MonoBehaviour
                 {
                     return "<sprite index=10>";
                 }
-            case '-':
-                {
-                    return "<sprite index=11>";
-                }
             case '.':
                 {
-                    return "<sprite index=12>";
+                    return "<sprite index=11>";
                 }
         }
         return "";
     }
-    public static string GetYellowSprite(char c)
+    public static string GetRedSprite(char c)
     {
         switch (c)
         {

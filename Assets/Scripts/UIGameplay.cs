@@ -305,7 +305,6 @@ public class UIGameplay : MonoBehaviour
                     heartTop.transform.localScale = Vector3.zero;
                     heartTop.transform.DOScale(new Vector3(1, 1, 1), 0.6f).SetEase(Ease.OutElastic).OnComplete(() => {
                     });
-                    SlotMachineScatterMode.Instance.StartScatterMode();
 
                 }
             });
@@ -326,9 +325,9 @@ public class UIGameplay : MonoBehaviour
     void SetFreeSpinData()
     {
         freeSpinMode.SetActive(true);
-        UIFreeSpinNumbers multiplyNumber = freeSpinMode.transform.Find("number").gameObject.GetComponent<UIFreeSpinNumbers>();
-        multiplyNumber.SetNumber(SlotMachine.Instance.slotData.scatterMultiplier);
-        heartTop.GetComponentInChildren<WhiteNumber>().SetNumber(SlotMachine.Instance.slotData.scatterCount);
+        //UIFreeSpinNumbers multiplyNumber = freeSpinMode.transform.Find("number").gameObject.GetComponent<UIFreeSpinNumbers>();
+        //multiplyNumber.SetNumber(SlotMachine.Instance.slotData.scatterMultiplier);
+        //heartTop.GetComponentInChildren<WhiteNumber>().SetNumber(SlotMachine.Instance.slotData.scatterCount);
 
         //WingNumber.SetNumber(SlotMachine.Instance.slotData.scatterMultiplier);
         //txtScatterMultiply.text = SpriteNumberManager.ToMeowWhite(SlotMachine.Instance.slotData.scatterMultiplier + "");
@@ -402,39 +401,12 @@ public class UIGameplay : MonoBehaviour
     }
     public void UpdateScateMode(int count,int multiply)
     {
-        /*        int scatterCount = 0;
-                int scatterMultiply = 0;
-                if (SlotMachine.Instance.slotData.isScatterMode)
-                {
-                    if (SlotMachine.Instance.slotData.wildSpawnIndex < 0)
-                        scatterCount = SlotMachine.Instance.slotData.scatterCount;
-                    else
-                        scatterCount = SlotMachine.Instance.slotData.scatterCount + 1;
-
-                    scatterMultiply = SlotMachine.Instance.slotData.scatterMultiplier;
-                }
-                else
-                {
-                    scatterCount = 2;
-                    scatterMultiply = 2;
-                }*/
-
-        //freeSpinMode.transform.Find("heartTop").gameObject.GetComponentInChildren<UIFreeSpinNumbers>().SetNumber(count);
-        //txtScatterCount.text = "" + count;
-        //Debug.Log("Scatter count : " + count + ", multiply : " + multiply);
-        //heartTop.transform.Find("group").gameObject.GetComponentInChildren<WhiteNumber>().SetNumber(count);
-        //freeSpinMode.transform.Find("bigHeartPink").gameObject.GetComponentInChildren<UIFreeSpinNumbers>().SetNumber(multiply);
-        //txtScatterMultiply.text = SpriteNumberManager.ToMeowWhite(multiply + "");
-        //txtScatterCount.text = SpriteNumberManager.ToMeowWhite(count + "");
-
-        //freeSpinMode.SetActive(true);
-        UIFreeSpinNumbers multiplyNumber = freeSpinMode.transform.Find("number").gameObject.GetComponent<UIFreeSpinNumbers>();
-        multiplyNumber.SetNumber(multiply);
-        heartTop.GetComponentInChildren<WhiteNumber>().SetNumber(count);
+        txtScatterCount.text = SpriteNumberManager.ToYellow(count.ToString());
+        txtScatterMultiply.text = SpriteNumberManager.ToYellow(multiply.ToString());
     }
     public void JellyHeartText()
     {
-        heartTop.GetComponentInChildren<WhiteNumber>().JellyEffect();
+        //heartTop.GetComponentInChildren<WhiteNumber>().JellyEffect();
         //txtScatterCount.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
         //txtScatterCount.transform.DOScale(new Vector3(1, 1, 1), 1).SetEase(Ease.OutElastic);
     }

@@ -66,7 +66,7 @@ public class LineManager : MonoBehaviour
                         if (SlotMachine.Instance.slotData.reward > 0 || (slot.slotData.isScatterMode == false && slot.slotData.comingFreeSpinCount > 0))
                         {
                             SoundManager.Instance.PlaySFX("Match");
-                            FreeSpinAvatar.Instance.PlayWin();
+                            //FreeSpinAvatar.Instance.PlayWin();
                         }
                     }
                    break;

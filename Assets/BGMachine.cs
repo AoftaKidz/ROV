@@ -21,20 +21,16 @@ public class BGMachine : MonoBehaviour
     {
         freespinBG.SetActive(false);
         normalBG.SetActive(true);
-        //normalMode.SetActive(true);
         freespinMode.SetActive(false);
     }
     public void FreeSpin()
     {
         normalBG.SetActive(false);
         freespinBG.SetActive(true);
-        //normalMode.SetActive(false);
         freespinMode.SetActive(true);
 
-        //spineMeowFreespin.AnimationState.SetAnimation(0, "Meow6_Freespin_IdleFX", true);
     }
     public void FreeSpin_CatIdle()
     {
-        //spineMeowFreespin.AnimationState.SetAnimation(0, "Meow6_Freespin_Idle", true);
     }
 }

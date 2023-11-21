@@ -4,6 +4,7 @@ using UnityEngine;
 using Spine.Unity;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class UIFreeSpinPopup : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class UIFreeSpinPopup : MonoBehaviour
     [SerializeField] GameObject btnStart;
     [SerializeField] SkeletonGraphic spine;
     [SerializeField] float transformDelay = 1;
+    [SerializeField] TextMeshProUGUI txtFreespinCount;
     bool isTransform = false;
     bool isShow = false;
     bool isHide = false;
@@ -47,9 +49,9 @@ public class UIFreeSpinPopup : MonoBehaviour
                 group.SetActive(true);
                 fade.SetActive(true);
                 //content.SetActive(true);
-                spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
-                spine.transform.localScale = Vector3.one / 2f;
-                spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
+                //spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
+                //spine.transform.localScale = Vector3.one / 2f;
+                //spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
             }
         }
         else
@@ -86,18 +88,8 @@ public class UIFreeSpinPopup : MonoBehaviour
         isShow = true;
         isReady = false;
         SoundManager.Instance.PlaySFX("AllWin");
-        //spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
-        //fade.SetActive(true);
-        //group.SetActive(true);
-
-        /* content.transform.DOScale(new Vector3(1, 1, 1), 1).OnComplete(()=>{
-             SoundManager.Instance.PlaySFX("FreeSpin");
-             _scatterCount = count;
-             fade.SetActive(true);
-             isShow = true;
-             isReady = false;
-             content.transform.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutQuint).OnComplete(ShowFinish);
-         });*/
+        UIGameplay.Instance.FreeSpinMode();
+        txtFreespinCount.text = SpriteNumberManager.ToYellow(count.ToString());
     }
     void ShowFinish()
     {
@@ -109,21 +101,7 @@ public class UIFreeSpinPopup : MonoBehaviour
         if (!isShow) return;
         isHide = true;
         isReady = false;
-
-        /*
-        spine.transform.DOScale(new Vector3(0, 0, 0), 0.3f).SetEase(Ease.OutQuint);
-
-        Sequence s = DOTween.Sequence();
-        s.SetDelay(0.0f);
-        //spine.transform.localScale = Vector3.zero;
-        s.Append(number.transform.DOScale(new Vector3(0, 0, 0), 0.3f).SetEase(Ease.OutQuint).OnComplete(HideFinish));
-        s.Play();
-        */
         HideFinish();
-/*
-        content.transform.DOLocalMoveY(-2778, 0.3f).SetEase(Ease.InQuint).OnComplete(() => {
-            HideFinish();
-        });*/
     }
     void HideFinish()
     {
@@ -133,18 +111,11 @@ public class UIFreeSpinPopup : MonoBehaviour
         isShow = false;
         fade.SetActive(false);
         btnStart.SetActive(false);
-        //UIGameplay.Instance.FreeSpinMode();
-        //SlotMachineScatterMode.Instance.StartScatterMode();
     }
     public void OnStart()
     {
-        //if (!isReady) return;
-        //SoundManager.Instance.PlaySFX("Close");
         Hide();
-        //SoundManager.Instance.PlaySFX("Click");
-        UIGameplay.Instance.FreeSpinMode();
-
-        //SlotMachineScatterMode.Instance.StartScatterMode();
+        SlotMachineScatterMode.Instance.StartScatterMode();
         SoundManager.Instance.PlayBGM("BGM Scatter");
 
     }

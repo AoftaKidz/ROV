@@ -228,7 +228,7 @@ public class SlotMachine : MonoBehaviour
         }
         else
         {
-            return;
+            //return;
 
             isSpinning = true;
             OnSlotColumnPreSpin?.Invoke();
@@ -308,11 +308,8 @@ public class SlotMachine : MonoBehaviour
 
         if (!_isInitSlotMachine)
         {
-            MockData(ref slotData);
+            //MockData(ref slotData);
 
-            //GachaMachine.Instance.GachaBallMove();
-            UIGameplay.Instance.AnimateButtonSpin();
-            //UIGameplay.Instance.CoinInsert();
             SoundManager.Instance.PlaySFX("SlotSpin", true);
             SoundManager.Instance.PlaySFX("Spin_Button");
 
@@ -325,11 +322,6 @@ public class SlotMachine : MonoBehaviour
             }
 
             initSlotResult = "";
-            /*            if (isFreeSpinMode)
-                            UIGameplay.Instance.UpdateScateMode(slotData.scatterCount, slotData.scatterMultiply);*/
- /*           slotData.isScatterMode = false;
-            slotData.comingFreeSpinCount = 5;
-            slotData.wildSpawnIndex = UnityEngine.Random.Range(0, 14);*/
             if (slotData.isScatterMode == false && slotData.comingFreeSpinCount > 0)
             {
                 //Start Scatter mode
@@ -339,7 +331,7 @@ public class SlotMachine : MonoBehaviour
                 OnSlotColumnSpin?.Invoke();
 
             }
-            else if(slotData.isScatterMode)
+            else if (slotData.isScatterMode)
             {
                 //Continue scatter mode
 
@@ -356,15 +348,13 @@ public class SlotMachine : MonoBehaviour
         }
         else
         {
-            MockData(ref slotData);
-
             //OnCreateSlotMachine?.Invoke();
             _isInitSlotMachine = false;
             initSlotResult = result;
-/*            slotData.isScatterMode = true;
-            slotData.comingFreeSpinCount = 5;
-            slotData.wildSpawnIndex = UnityEngine.Random.Range(0, 14);*/
-          /*  if (slotData.isScatterMode)
+            /*            slotData.isScatterMode = true;
+                        slotData.comingFreeSpinCount = 5;
+                        slotData.wildSpawnIndex = UnityEngine.Random.Range(0, 14);*/
+            if (slotData.isScatterMode)
             {
                 int scatterCount = 0;
                 //Continue scatter mode
@@ -373,17 +363,17 @@ public class SlotMachine : MonoBehaviour
                 else
                     scatterCount = slotData.scatterCount + 1;
 
-                    int num = 0;
-                    foreach (int d in slotData.data)
-                    {
-                        if (d == (int)SlotMachineID.Puzzle_Collectable)
-                            num++;
-                    }
+                int num = 0;
+                foreach (int d in slotData.data)
+                {
+                    if (d == (int)SlotMachineID.Puzzle_Collectable)
+                        num++;
+                }
 
                 scatterCount = scatterCount + num;
-                
+
                 UIFreeSpinPopup.Instance.Show(scatterCount);
-            }*/
+            }
         }
     }
     void SpinFailed(string result)

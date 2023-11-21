@@ -47,7 +47,7 @@ public class UIFreeSpinTotalPopup : MonoBehaviour
             //Hide();
             btnClose.SetActive(true);
             isStart = false;
-            spine.AnimationState.SetAnimation(0, "TotalWin_Idle", true);
+            //spine.AnimationState.SetAnimation(0, "TotalWin_Idle", true);
         }
     }
     void UpdateReward()
@@ -83,9 +83,9 @@ public class UIFreeSpinTotalPopup : MonoBehaviour
         SoundManager.Instance.PlaySFX("WinResult");
         UIRoundRewardPopup.Instance.Hide();
         txtReward.text = "";
-        spine.AnimationState.SetAnimation(0, "TotalWin_Start", false);
+   /*     spine.AnimationState.SetAnimation(0, "TotalWin_Start", false);
         spine.transform.localScale = Vector3.one/2f;
-        spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
+        spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);*/
         txtReward.transform.localScale = Vector3.zero;
         txtReward.transform.DOScale(1, 1).SetEase(Ease.OutElastic);
         //UpdateReward();
