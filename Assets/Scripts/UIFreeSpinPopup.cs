@@ -49,7 +49,7 @@ public class UIFreeSpinPopup : MonoBehaviour
                 group.SetActive(true);
                 fade.SetActive(true);
                 //content.SetActive(true);
-                //spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
+                spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
                 //spine.transform.localScale = Vector3.one / 2f;
                 //spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
             }
