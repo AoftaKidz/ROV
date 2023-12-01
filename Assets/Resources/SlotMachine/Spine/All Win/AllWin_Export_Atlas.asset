@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
-  m_Name: AllWin_Atlas
+  m_Name: AllWin_Export_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: a912a67168168f047b8bd78fc6bf086e, type: 3}
+  atlasFile: {fileID: 4900000, guid: 3efa48d05c879f34d89fa0029afaff1b, type: 3}
   materials:
-  - {fileID: 2100000, guid: 7ad9d413c608c41408ebdc6668d6d4fa, type: 2}
+  - {fileID: 2100000, guid: 3eba21a81a858ad4595daa3b058974b1, type: 2}

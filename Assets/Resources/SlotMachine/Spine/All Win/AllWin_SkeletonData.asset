@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AllWin_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 1d82704ef625d3947b4aa8d8534ce45d, type: 2}
+  - {fileID: 11400000, guid: 02eb750ca72a9f84eb8dbbe47e352fb2, type: 2}
   scale: 0.01
   skeletonJSON: {fileID: 4900000, guid: bc39e87a528374b45ad448492e4da615, type: 3}
   isUpgradingBlendModeMaterials: 0

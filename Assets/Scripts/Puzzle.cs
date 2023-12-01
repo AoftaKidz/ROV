@@ -241,7 +241,7 @@ public class Puzzle : MonoBehaviour
     }
     public void WildSpawnFX()
     {
-        _spineAnimation.AnimationState.SetAnimation(0, "Wild_Spawn", false);
+        //_spineAnimation.AnimationState.SetAnimation(0, "Wild_Spawn", false);
     }
     public void SetPuzzleData()
     {

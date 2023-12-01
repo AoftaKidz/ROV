@@ -127,16 +127,22 @@ public class WildTall : MonoBehaviour
     }
     Vector3 GetPosition(int column)
     {
-        float x = 0.02f;
-        float y = 0.0f;
+        float x = -0.22f;
+        float y = -0.43f;
         switch (column)
         {
-            case 0: return new Vector3(-6.0f+x, y,5 - columnID);
+            /*case 0: return new Vector3(-6.0f+x, y,5 - columnID);
             case 1:return new Vector3(-1.29f + x, y, 5 - columnID);
             case 2: return new Vector3(1.45f + x, y, 5 - columnID);
             case 3: return new Vector3(4.19f + x, y, 5 - columnID);
             case 4: return new Vector3(6.97f + x, y, 5 - columnID);
-            case 5: return new Vector3(9.73f + x, y, 5 - columnID);
+            case 5: return new Vector3(9.73f + x, y, 5 - columnID);*/
+            case 0: return new Vector3(-9.91f, -0.7f, 5 - columnID);
+            case 1: return new Vector3(-5.91f, -0.7f, 5 - columnID);
+            case 2: return new Vector3(-3.02f, -0.7f, 5 - columnID);
+            case 3: return new Vector3(-0.07f, -0.7f, 5 - columnID);
+            case 4: return new Vector3(2.84f, -0.7f, 5 - columnID);
+            case 5: return new Vector3(5.76f, -0.7f, 5 - columnID);
         }
         return Vector3.zero;
     }

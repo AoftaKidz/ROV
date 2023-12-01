@@ -91,8 +91,8 @@ public class UIGameplay : MonoBehaviour
     {
        // return;
 
-        if (SlotMachine.Instance.slotData.isScatterMode == false && SlotMachine.Instance.slotData.comingFreeSpinCount > 0 && SlotMachine.isSpinning == false)
-            return;
+        /*if (SlotMachine.Instance.slotData.isScatterMode == false && SlotMachine.Instance.slotData.comingFreeSpinCount > 0 && SlotMachine.isSpinning == false)
+            return;*/
         float w = (float)UserProfile.Instance.wallet - UserProfile.Instance.betTotal;
         if (w < 0) return;
 
