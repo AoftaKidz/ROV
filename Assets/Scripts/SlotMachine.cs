@@ -51,6 +51,7 @@ public class SlotMachine : MonoBehaviour
     static public bool isTurboMode = false;
     static public bool isAutoMode = false;
     static public bool isFreeSpinMode = false;
+    static public bool isFreeSpinModeAuto = false;
 
     public BetModel slotData = null;
     bool _isInitSlotMachine = true;

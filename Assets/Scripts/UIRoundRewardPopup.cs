@@ -51,8 +51,8 @@ public class UIRoundRewardPopup : MonoBehaviour
             }
         }else if (_isWait)
         {
-            _time += Time.deltaTime;
-            if(_time > 2.5f)
+            _time += Time.deltaTime * SlotMachine.turbo;
+            if (_time > 2.5f)
             {
                 _time = 0;
                 _isWait = false;

@@ -30,8 +30,8 @@ public class UIBigWinPopup : MonoBehaviour
     {
         if (!isStart) return;
 
-        time += Time.deltaTime;
-        if(!isShowReward && time > 1)
+        time += Time.deltaTime * SlotMachine.turbo;
+        if (!isShowReward && time > 1)
         {
             ShowReward();
         }

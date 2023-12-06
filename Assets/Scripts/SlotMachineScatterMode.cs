@@ -19,7 +19,8 @@ public class SlotMachineScatterMode : MonoBehaviour
         WaitForSpin,
         Spinning,
         Matching,
-        End
+        End,
+        ClickForSpin
     }
     int _count = 0;
     int _current = 0;
@@ -206,22 +207,24 @@ public class SlotMachineScatterMode : MonoBehaviour
                 }
             case ScatterState.WaitForSpin:
                 {
-                    if(!UIKindOfMeowPopup.Instance.Appear() && !UIBigWinPopup.Instance.Appear() && !UIRoundRewardPopup.Instance.Appear())
+                    if (UIKindOfMeowPopup.Instance.Appear()) return;
+                    if (UIBigWinPopup.Instance.Appear()) return;
+                    if (UIRoundRewardPopup.Instance.Appear()) return;
+
                     _time += Time.deltaTime;
                     float delay = 1;
-                    /*foreach (int d in SlotMachine.Instance.slotData.data)
-                    {
-                        if (d == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
-                            delay = 6;
-                    }*/
-
                     if (_time > delay)
                     {
-                        //if(SlotMachine.Instance.slotData.scatterCount > 0)
-                        if(!SlotMachine.Instance.slotData.wildEnded)
+                        if (!SlotMachine.Instance.slotData.wildEnded)
                         {
-                            isWildSpawning = true;
-                            AutoSpin();
+                            if (SlotMachine.isFreeSpinModeAuto)
+                            {
+                                AutoSpin();
+                            }
+                            else
+                            {
+                                _state = ScatterState.ClickForSpin;
+                            }
                         }
                         else
                         {
@@ -230,6 +233,21 @@ public class SlotMachineScatterMode : MonoBehaviour
                             _state = ScatterState.End;
                         }
                         _time = 0;
+                    }
+                    break;
+                }
+            case ScatterState.ClickForSpin:
+                {
+                    //Wait user click to spin
+                    if (!SlotMachine.Instance.slotData.wildEnded && SlotMachine.isFreeSpinModeAuto)
+                    {
+                        AutoSpin();
+                    }
+                    else if (SlotMachine.Instance.slotData.wildEnded)
+                    {
+                        //End
+                        isWildSpawning = false;
+                        _state = ScatterState.End;
                     }
                     break;
                 }
@@ -242,20 +260,8 @@ public class SlotMachineScatterMode : MonoBehaviour
                     }
                     else
                     {
-                        //
-                        Debug.Log("Spinning Finish.");
-
-                        /*bool checkCollectable = false;
-                        foreach (int d in SlotMachine.Instance.slotData.data)
-                        {
-                            if (d == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
-                                checkCollectable = true;
-                        }
-
-                        if(!checkCollectable)*/
                         UpdateScatterCount();
 
-                        //UIGameplay.Instance.UpdateScateMode(SlotMachine.Instance.slotData.scatterCount, SlotMachine.Instance.slotData.scatterMultiplier);
                         if (SlotMachine.Instance.slotData.wildSpawnIndex < 0)
                         {
                             _state = ScatterState.WaitForSpin;
@@ -301,9 +307,6 @@ public class SlotMachineScatterMode : MonoBehaviour
     }
     public void UpdateScatterCount(bool playEffect = false)
     {
-        /*if (playEffect)
-            particleCounting.Play();*/
-
         int scatterCount = 0;
         int scatterMultiply = 0;
         if (SlotMachine.Instance.slotData.isScatterMode)
@@ -314,20 +317,8 @@ public class SlotMachineScatterMode : MonoBehaviour
                 scatterCount = SlotMachine.Instance.slotData.scatterCount + 1;
 
             scatterMultiply = SlotMachine.Instance.slotData.scatterMultiplier == 0 ? 2 : SlotMachine.Instance.slotData.scatterMultiplier;
-/*            if(!_isStart)
-            {
-                _isStart = true;
-                int num = 0;
-                foreach (int d in SlotMachine.Instance.slotData.data)
-                {
-                    if (d == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
-                        num++;
-                }
 
-                lastScatterCount = scatterCount - num;
-            }
-            else*/
-                lastScatterCount = scatterCount;
+            lastScatterCount = scatterCount;
         }
         else
         {
@@ -340,19 +331,35 @@ public class SlotMachineScatterMode : MonoBehaviour
     }
     public void AddScatterCount(int num)
     {
-        //particleCounting.Play();
         lastScatterCount += num;
         UIGameplay.Instance.UpdateScateMode(lastScatterCount, SlotMachine.Instance.slotData.scatterMultiplier);
         UIGameplay.Instance.JellyHeartText();
+    }
+    public void OnClickSpin()
+    {
+        if (SlotMachine.isSpinning)
+        {
+            if (SlotMachine.Instance.Busy()) return;
+
+            SlotMachine.Instance.Spin();
+        }
+        else
+        {
+            if (_state != ScatterState.ClickForSpin) return;
+            if (UIKindOfMeowPopup.Instance.Appear()) return;
+            if (UIBigWinPopup.Instance.Appear()) return;
+            if (UIRoundRewardPopup.Instance.Appear()) return;
+
+            AutoSpin();
+        }
     }
     public void AutoSpin()
     {
         if (!SlotMachine.isFreeSpinMode) return;
         _state = ScatterState.Spinning;
-        Debug.Log("AutoSpin");
-        //UIRoundRewardPopup.Instance.Hide();
         SlotMachine.Instance.Spin();
-        //UIGameplay.Instance.UpdateScateMode(SlotMachine.Instance.slotData.scatterCount,2);
+        UIGameplay.Instance.AnimateFreespinSpinButton();
+
     }
     public void StopAutoSpin()
     {
@@ -360,7 +367,6 @@ public class SlotMachineScatterMode : MonoBehaviour
         _count = 0;
         _current = 0;
         SlotMachine.isAutoMode = false;
-        //OnStopAutoSpin?.Invoke();
     }
     public void CreateCollectableHeart()
     {

@@ -1,0 +1,55 @@
+
+Btn_FreeSpin.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Energy
+  rotate: false
+  xy: 399, 425
+  size: 85, 85
+  orig: 109, 109
+  offset: 12, 12
+  index: -1
+Ico_Auto
+  rotate: false
+  xy: 2, 70
+  size: 34, 35
+  orig: 34, 35
+  offset: 0, 0
+  index: -1
+Ico_Turbo
+  rotate: false
+  xy: 486, 474
+  size: 24, 36
+  orig: 24, 36
+  offset: 0, 0
+  index: -1
+Line
+  rotate: false
+  xy: 2, 284
+  size: 190, 226
+  orig: 190, 226
+  offset: 0, 0
+  index: -1
+Ring
+  rotate: false
+  xy: 194, 299
+  size: 203, 211
+  orig: 204, 211
+  offset: 0, 0
+  index: -1
+Shoulder
+  rotate: true
+  xy: 194, 174
+  size: 123, 143
+  orig: 128, 158
+  offset: 4, 8
+  index: -1
+Sphear
+  rotate: false
+  xy: 2, 107
+  size: 175, 175
+  orig: 175, 175
+  offset: 0, 0
+  index: -1

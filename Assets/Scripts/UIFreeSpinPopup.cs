@@ -32,7 +32,7 @@ public class UIFreeSpinPopup : MonoBehaviour
     void Start()
     {
         Instance = this;
-        //Show(2);
+        Hide();
     }
 
     // Update is called once per frame
@@ -48,10 +48,16 @@ public class UIFreeSpinPopup : MonoBehaviour
                 isDelay = false;
                 group.SetActive(true);
                 fade.SetActive(true);
-                //content.SetActive(true);
+                content.SetActive(true);
                 spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
                 //spine.transform.localScale = Vector3.one / 2f;
                 //spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
+                content.transform.DOLocalMoveY(0, 0.6f).SetEase(Ease.OutQuart).OnComplete(() =>
+                {
+                    /*spine.AnimationState.SetAnimation(0, "FreeSpin_Start", false);
+                    spine.transform.localScale = Vector3.one / 2f;
+                    spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);*/
+                });
             }
         }
         else
@@ -80,6 +86,7 @@ public class UIFreeSpinPopup : MonoBehaviour
     }
     public void Show(int count)
     {
+        SlotMachine.isFreeSpinModeAuto = false;
         isDelay = true;
         isTransform = false;
         Puzzle.isEnableClick = false;
@@ -101,7 +108,11 @@ public class UIFreeSpinPopup : MonoBehaviour
         if (!isShow) return;
         isHide = true;
         isReady = false;
-        HideFinish();
+
+        content.transform.DOLocalMoveY(-2778, 0.3f).SetEase(Ease.InQuart).OnComplete(() =>
+        {
+            HideFinish();
+        });
     }
     void HideFinish()
     {

@@ -38,6 +38,10 @@ public class UIGameplay : MonoBehaviour
     SkeletonGraphic _spineAnimation;
     [SerializeField] string coinAnimationNameIdle = "Coin_Idle";
     [SerializeField] string coinAnimationNameInsert = "Coin_Insert";
+    [SerializeField] SkeletonGraphic spineFreeSpinTurboButton;
+    [SerializeField] SkeletonGraphic spineFreeSpinAutoButton;
+    [SerializeField] SkeletonGraphic spineFreeSpinSpinButton;
+
 
     bool _isNormalMode = true;
     bool _isOptionMode = false;
@@ -157,6 +161,7 @@ public class UIGameplay : MonoBehaviour
             c.a = 0.3f;
             btnTurbo.GetComponent<Image>().color = c;
         }
+        UpdateFreeSpinModeButtons();
     }
     public void OnClickAuto()
     {
@@ -164,6 +169,44 @@ public class UIGameplay : MonoBehaviour
 
         //UIAutoSpinPopup.Instance.Show();
         UIAutoSpinSettingPopup.Instance.Show();
+
+    }
+    public void OnClickFreeSpinAuto()
+    {
+        SoundManager.Instance.PlaySFX("Click");
+        SlotMachine.isFreeSpinModeAuto = !SlotMachine.isFreeSpinModeAuto;
+
+        UpdateFreeSpinModeButtons();
+    }
+    public void UpdateFreeSpinModeButtons()
+    {
+        //Spine button for free spin mode
+
+        if (SlotMachine.isFreeSpinModeAuto)
+        {
+            Color c = spineFreeSpinAutoButton.color;
+            c.a = 1;
+            spineFreeSpinAutoButton.color = c;
+        }
+        else
+        {
+            Color c = spineFreeSpinAutoButton.color;
+            c.a = 0.3f;
+            spineFreeSpinAutoButton.color = c;
+        }
+
+        if (SlotMachine.isTurboMode)
+        {
+            Color c = spineFreeSpinTurboButton.color;
+            c.a = 1;
+            spineFreeSpinTurboButton.color = c;
+        }
+        else
+        {
+            Color c = spineFreeSpinTurboButton.color;
+            c.a = 0.3f;
+            spineFreeSpinTurboButton.color = c;
+        }
     }
     public void OnClickHamburger()
     {
@@ -258,6 +301,8 @@ public class UIGameplay : MonoBehaviour
     }
     public void FreeSpinMode()
     {
+        UpdateFreeSpinModeButtons();
+
         btnOption.SetActive(false);
 
         //normal_gachashop.transform.DOLocalMoveY(-13, 0.3f);
@@ -426,5 +471,11 @@ public class UIGameplay : MonoBehaviour
     {
         //_spineAnimation.AnimationState.SetAnimation(0, coinAnimationNameIdle, true);
         //_spineAnimation.startingAnimation = coinAnimationNameInsert;
+    }
+    public void AnimateFreespinSpinButton()
+    {
+        spineFreeSpinSpinButton.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        spineFreeSpinSpinButton.transform.DOScale(new Vector3(1f, 1f, 1f), 1.0f).SetEase(Ease.OutElastic);
+        spineFreeSpinSpinButton.transform.DORestart();
     }
 }
