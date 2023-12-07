@@ -174,22 +174,14 @@ public class SlotColumn : MonoBehaviour
 
                             //Update score
                             //OnUpdateReward?.Invoke(slot.slotData.totalReward);
-                            if(SlotMachine.isFreeSpinMode)
+                            UserProfile.Instance.wallet = slot.slotData.userBalance;
+                            if (SlotMachine.isFreeSpinMode)
                                 UIGameplay.Instance.UpdateReward(slot.slotData.totalReward);
                             else
-                                UIGameplay.Instance.UpdateReward(slot.slotData.reward);
-                            UserProfile.Instance.wallet = slot.slotData.userBalance;
-                            UserProfile.Instance.CallUpdateUserProfile();
-
-                            if(slot.slotData.totalReward > 0)
                             {
-                                //SoundManager.Instance.PlaySFX("GirlRedHair_Win");
-                                //SoundManager.Instance.PlaySFX("GirlGoldHair_Win");
+                                UIGameplay.Instance.UpdateReward(slot.slotData.reward);
+                                UserProfile.Instance.CallUpdateUserProfile();
                             }
-
-                            //UIGameplay.Instance.HideSexyGirlSpin();
-                            //SoundManager.Instance.StopSFX("SlotSpin");
-
                         }
 
                         CreateWildTall();

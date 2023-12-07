@@ -71,6 +71,7 @@ public class UIFreeSpinTotalPopup : MonoBehaviour
     }
     public void Show()
     {
+        UserProfile.Instance.CallUpdateUserProfile();
         btnClose.SetActive(false);
         BGMachine.Instance.Normal();
         SoundManager.Instance.PlayBGM("BGM Gameplay");
