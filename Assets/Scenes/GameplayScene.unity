@@ -17434,7 +17434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
       propertyPath: SFX.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
       propertyPath: BGMs.Array.size
@@ -17481,6 +17481,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 25fe1d11d02651147b5add284fce159f, type: 3}
     - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
+      propertyPath: SFX.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b87b1787eda920a47b50aa122e3d7331, type: 3}
+    - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
       propertyPath: BGMs.Array.data[0].fileName
       value: BGM Title
       objectReference: {fileID: 0}
@@ -17519,6 +17523,10 @@ PrefabInstance:
     - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
       propertyPath: SFX.Array.data[21].fileName
       value: Lightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386448782710167893, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
+      propertyPath: SFX.Array.data[22].fileName
+      value: AllWin
       objectReference: {fileID: 0}
     - target: {fileID: 2386448782710167894, guid: 2b37cc11fefe48846a1c1ed5783aecc7, type: 3}
       propertyPath: m_Name

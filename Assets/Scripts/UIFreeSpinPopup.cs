@@ -44,6 +44,8 @@ public class UIFreeSpinPopup : MonoBehaviour
             _time += Time.deltaTime;
             if(_time > startDelay)
             {
+                BGMachine.Instance.FreeSpin();
+                SoundManager.Instance.PlaySFX("AllWin");
                 _time = 0;
                 isDelay = false;
                 group.SetActive(true);
@@ -65,7 +67,6 @@ public class UIFreeSpinPopup : MonoBehaviour
             _time += Time.deltaTime;
             if (_time > transformDelay && !isTransform)
             {
-                BGMachine.Instance.FreeSpin();
                 isTransform = true;
             }
 
@@ -94,7 +95,6 @@ public class UIFreeSpinPopup : MonoBehaviour
         _scatterCount = count;
         isShow = true;
         isReady = false;
-        SoundManager.Instance.PlaySFX("AllWin");
         UIGameplay.Instance.FreeSpinMode();
         txtFreespinCount.text = SpriteNumberManager.ToYellow(count.ToString());
     }
