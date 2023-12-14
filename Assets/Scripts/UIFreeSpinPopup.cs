@@ -96,7 +96,7 @@ public class UIFreeSpinPopup : MonoBehaviour
         isShow = true;
         isReady = false;
         UIGameplay.Instance.FreeSpinMode();
-        txtFreespinCount.text = SpriteNumberManager.ToYellow(count.ToString());
+        txtFreespinCount.text = SpriteNumberManager.ToYellow("X" + count.ToString());
     }
     void ShowFinish()
     {

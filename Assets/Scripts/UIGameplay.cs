@@ -446,8 +446,8 @@ public class UIGameplay : MonoBehaviour
     }
     public void UpdateScateMode(int count,int multiply)
     {
-        txtScatterCount.text = SpriteNumberManager.ToYellow(count.ToString());
-        txtScatterMultiply.text = SpriteNumberManager.ToYellow(multiply.ToString());
+        txtScatterCount.text = SpriteNumberManager.ToYellow("X" + count.ToString());
+        txtScatterMultiply.text = SpriteNumberManager.ToYellow("X" + multiply.ToString());
     }
     public void JellyHeartText()
     {

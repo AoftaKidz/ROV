@@ -101,6 +101,14 @@ public class SpriteNumberManager : MonoBehaviour
                 {
                     return "<sprite index=11>";
                 }
+            case 'x':
+                {
+                    return "<sprite index=12>";
+                }
+            case 'X':
+                {
+                    return "<sprite index=12>";
+                }
         }
         return "";
     }

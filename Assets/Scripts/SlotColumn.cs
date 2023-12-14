@@ -15,7 +15,9 @@ public class SlotColumn : MonoBehaviour
     static public event Action<int> OnActiveWildTall;
     static public event Action<int> OnScatterMode;
     static public event Action<float> OnUpdateReward;
+    static public int scatterCount = 0;
 
+    public int maxScatterCount = 2;
     public GameObject prefabWildTall;
     public float duration = 2;
     public float delay = 0;
@@ -26,6 +28,10 @@ public class SlotColumn : MonoBehaviour
     float _currTime = 0;
     float _currDelayTime = 0;
     Vector2 _offset = new Vector2(0, 0);
+    public bool isSlowMotion = false;
+    public float slowMotionFactor = 0.3f;
+    public float slowMotionDuration = 1.5f;
+    public GameObject scatterFX;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +40,9 @@ public class SlotColumn : MonoBehaviour
         Material mat = Instantiate(rend.material);
         rend.material = mat;
         //SetMaterial();
-        sprite.SetActive(false); 
+        sprite.SetActive(false);
+        if (scatterFX.activeSelf)
+            scatterFX.SetActive(false);
     }
     private void OnEnable()
     {
@@ -74,39 +82,64 @@ public class SlotColumn : MonoBehaviour
                 }
             case 2:
                 {
-                    
+
                     //SetMaterial();
-                    _currTime += Time.deltaTime * SlotMachine.turbo;
-                    if (_currTime >= duration)
+                    float _d = duration;
+
+                    if (scatterCount >= maxScatterCount)
                     {
+                        //Slow motion mode
+                        _currTime += Time.deltaTime;
+                        _d = duration + slowMotionDuration;
+                        if (!scatterFX.activeSelf)
+                            scatterFX.SetActive(true);
+                    }
+                    else
+                    {
+                        _currTime += Time.deltaTime * SlotMachine.turbo;
+                        if (scatterFX.activeSelf)
+                            scatterFX.SetActive(false);
+                    }
+
+                    //SetMaterial();
+                    //_currTime += Time.deltaTime * SlotMachine.turbo;
+                    //if (_currTime >= duration)
+                    if (_currTime >= _d)
+                    {
+                        scatterFX.SetActive(false);
+
                         //Spin finish
+                        CountTheScatter();
+
                         GachaMachine.Instance.BallDrop();
                         UIGameplay.Instance.CoinIdle();
                         _state = (int)SlotColumnState.None;
                         sprite.SetActive(false);
 
                         OnSpinFinish?.Invoke(columnID);
-                        SoundManager.Instance.StopSFX("SlotSpin");
                         SoundManager.Instance.PlaySFX("SpinStop");
 
                         if (columnID == 5)
                         {
+                            SoundManager.Instance.StopSFX("SlotSpin");
+
                             SpinButtonAnimate.isSpinning = false;
                             LineManager.Instance.CreateLine();
                             SlotMachine.isSpinning = false;
 
                             SlotMachine slot = SlotMachine.Instance;
-                            if(UIKindOfMeowPopup.Instance.Condition())
+                            if (UIKindOfMeowPopup.Instance.Condition())
                             {
                                 //Show UIWinBetPopup
                                 UIKindOfMeowPopup.Instance.Show();
-                            }else if (UIBigWinPopup.Instance.Condition())
+                            }
+                            else if (UIBigWinPopup.Instance.Condition())
                             {
                                 //Show UIWinBetPopup
                                 UIBigWinPopup.Instance.Show();
                             }
                             //Check for Free spin mode
-                            else if(slot.slotData.isScatterMode == false && slot.slotData.comingFreeSpinCount > 0)
+                            else if (slot.slotData.isScatterMode == false && slot.slotData.comingFreeSpinCount > 0)
                             {
                                 //Start scatter
                                 ScatterModeInvoke(slot.slotData.comingFreeSpinCount);
@@ -132,16 +165,16 @@ public class SlotColumn : MonoBehaviour
                                 {
                                     double balance_diff = UIAutoSpinSettingPopup.Instance.startBalance - SlotMachine.Instance.slotData.userBalance;
                                     //Debug.Log("Decrease Balance stop : " + UIAutoSpinSettingPopup.Instance.startBalance + ", balance : " + SlotMachine.Instance.slotData.userBalance);
-                                    if(balance_diff > 0 && balance_diff >= UIAutoSpinSettingPopup.Instance.decreaseBalanceStop)
+                                    if (balance_diff > 0 && balance_diff >= UIAutoSpinSettingPopup.Instance.decreaseBalanceStop)
                                     {
                                         //Debug.Log("Stop auto " + balance_diff);
                                         SlotMachineAutoSpin.Instance.StopAutoSpin();
                                         check = false;
                                     }
-                                } 
+                                }
 
                                 //Check increase Balance Stop
-                                 if (UIAutoSpinSettingPopup.Instance.increaseBalanceStop > 0)
+                                if (UIAutoSpinSettingPopup.Instance.increaseBalanceStop > 0)
                                 {
                                     double balance_diff = SlotMachine.Instance.slotData.userBalance - UIAutoSpinSettingPopup.Instance.startBalance;
                                     //Debug.Log("Increase Balance stop : " + UIAutoSpinSettingPopup.Instance.startBalance + ", balance : " + SlotMachine.Instance.slotData.userBalance);
@@ -155,7 +188,7 @@ public class SlotColumn : MonoBehaviour
                                 }
 
                                 //Check Reward Stop
-                                 if (UIAutoSpinSettingPopup.Instance.rewardStop > 0)
+                                if (UIAutoSpinSettingPopup.Instance.rewardStop > 0)
                                 {
                                     //Debug.Log("increase Balance stop : " + SlotMachine.Instance.slotData.reward);
                                     if (SlotMachine.Instance.slotData.reward >= UIAutoSpinSettingPopup.Instance.rewardStop)
@@ -166,7 +199,7 @@ public class SlotColumn : MonoBehaviour
                                     }
                                 }
 
-                                if(check)
+                                if (check)
                                 {
                                     SlotMachineAutoSpin.Instance.AutoSpin();
                                 }
@@ -174,14 +207,32 @@ public class SlotColumn : MonoBehaviour
 
                             //Update score
                             //OnUpdateReward?.Invoke(slot.slotData.totalReward);
+                            /* if(SlotMachine.isFreeSpinMode)
+                                 UIGameplay.Instance.UpdateReward(slot.slotData.totalReward);
+                             else
+                                 UIGameplay.Instance.UpdateReward(slot.slotData.reward);
+                             UserProfile.Instance.wallet = slot.slotData.userBalance;
+                             UserProfile.Instance.CallUpdateUserProfile();*/
                             UserProfile.Instance.wallet = slot.slotData.userBalance;
+
                             if (SlotMachine.isFreeSpinMode)
                                 UIGameplay.Instance.UpdateReward(slot.slotData.totalReward);
                             else
                             {
                                 UIGameplay.Instance.UpdateReward(slot.slotData.reward);
+                                //Update wallet for non free spin mode only
                                 UserProfile.Instance.CallUpdateUserProfile();
                             }
+
+                            if (slot.slotData.totalReward > 0)
+                            {
+                                //SoundManager.Instance.PlaySFX("GirlRedHair_Win");
+                                //SoundManager.Instance.PlaySFX("GirlGoldHair_Win");
+                            }
+
+                            //UIGameplay.Instance.HideSexyGirlSpin();
+                            //SoundManager.Instance.StopSFX("SlotSpin");
+
                         }
 
                         CreateWildTall();
@@ -189,7 +240,12 @@ public class SlotColumn : MonoBehaviour
                     else
                     {
                         //Spinning
-                        _offset.y += speed * Time.deltaTime;
+                        //Spinning
+                        if (scatterCount >= maxScatterCount)
+                            _offset.y += speed * Time.deltaTime * slowMotionFactor;
+                        else
+                            _offset.y += speed * Time.deltaTime;
+                        //_offset.y += speed * Time.deltaTime;
                         SetMaterial();
                     }
                     break;
@@ -198,6 +254,7 @@ public class SlotColumn : MonoBehaviour
     }
     public void PreSpin()
     {
+        scatterCount = 0;
         sprite.SetActive(true);
         _state = (int)SlotColumnState.PreSpin;
         _currTime = 0;
@@ -265,6 +322,27 @@ public class SlotColumn : MonoBehaviour
     {
         Puzzle.isEnableClick = false;
         OnScatterMode?.Invoke(count);
+    }
+    void CountTheScatter()
+    {
+        int col = columnID - 1;
+        int a = col * 3;
+        int b = col * 3 + 1;
+        int c = col * 3 + 2;
+
+        if (SlotMachine.Instance.slotData.data[a] == (int)SlotMachine.SlotMachineID.Puzzle_Scatter)
+        {
+            scatterCount++;
+        }
+        else if (SlotMachine.Instance.slotData.data[b] == (int)SlotMachine.SlotMachineID.Puzzle_Scatter)
+        {
+            scatterCount++;
+        }
+        else if (SlotMachine.Instance.slotData.data[c] == (int)SlotMachine.SlotMachineID.Puzzle_Scatter)
+        {
+            scatterCount++;
+        }
+
     }
     static public SlotColumn GetSlotColumn(int column)
     {
