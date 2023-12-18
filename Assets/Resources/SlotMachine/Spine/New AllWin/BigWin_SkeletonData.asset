@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: Wild_Expand_SkeletonData
+  m_Name: BigWin_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 70f0da76a5e828c4ebc735a246e5c7f2, type: 2}
+  - {fileID: 11400000, guid: a4d5ec6e2992bf44a973f174e16bdd65, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 000999515a312ec47b5f8c8958ba4d15, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 9f16d55f17d3e6a4d9228a17488847c2, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

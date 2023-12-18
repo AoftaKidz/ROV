@@ -34,57 +34,17 @@ public class UIKindOfMeowPopup : MonoBehaviour
     }
     public void Show()
     {
-        //string kindAnim = GetKindName();
-
-        //if (!Condition()) return;
-        //if (kindAnim == "") return;
-
+        if (!Condition()) return;
+ 
         isStart = true;
         content.SetActive(true);
 
-        //int skinId = SlotMachine.Instance.slotData.ballColor;
-        //int anim = 3;
 
         spine.gameObject.SetActive(true);
-        //CHange Skin name
-        /*if (skinId == 0)
-        {
-            spine.Skeleton.SetSkin("Blue");
-        }
-        else if (skinId == 1)
-        {
-            spine.Skeleton.SetSkin("Red");
-        }
-        else
-        {
-            spine.Skeleton.SetSkin("Yellow");
-        }*/
         SoundManager.Instance.PlaySFX("AllWin");
         spine.AnimationState.SetAnimation(0, "5Kind_Idle", false);
         spine.transform.localScale = Vector3.one / 2f;
         spine.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
-        //Change animation
-        /* if (kindAnim.Contains("Meow"))
-         {
-             //spine5kind.Start
-             SoundManager.Instance.PlaySFX("5_of_Kind");
-         }
-         else if (anim == 1)
-         {
-             SoundManager.Instance.PlaySFX("5_of_Kind");
-         }
-         else if (anim == 2)
-         {
-             SoundManager.Instance.PlaySFX("5_of_Kind");
-         }
-         else if (anim == 3)
-         {
-             SoundManager.Instance.PlaySFX("5_of_Kind");
-         }
-         else if (anim == 4)
-         {
-             SoundManager.Instance.PlaySFX("5_of_Kind");
-         }*/
     }
     public void Hide()
     {
@@ -116,7 +76,6 @@ public class UIKindOfMeowPopup : MonoBehaviour
     }
     public bool Condition()
     {
-        return false;
         if (SlotMachine.Instance == null) return false;
         if (SlotMachine.Instance.slotData == null) return false;
         if (SlotMachine.Instance.slotData.reward == 0) return false;

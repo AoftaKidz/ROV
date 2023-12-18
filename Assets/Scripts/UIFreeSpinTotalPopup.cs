@@ -37,11 +37,6 @@ public class UIFreeSpinTotalPopup : MonoBehaviour
         {
             UpdateReward();
         }
-        /*else if(!isHideReward && time > 7)
-        {
-            isHideReward = true;
-            txtReward.transform.DOScale(0, 0.6f).SetEase(Ease.OutQuint);
-        }*/
         else if(time > delay)
         {
             //Hide();
@@ -53,21 +48,8 @@ public class UIFreeSpinTotalPopup : MonoBehaviour
     void UpdateReward()
     {
         isShowReward = true;
-        //SlotMachine.Instance.slotData.totalReward = 1234.56f;
-        //rewardAnimate.StartAnimate(1234.56f);
-        rewardAnimate.StartAnimate(SlotMachine.Instance.slotData.totalReward);
+        rewardAnimate.StartAnimate(12345.67f);
 
-        return;
-        if (SlotMachine.Instance.slotData.totalReward == 0)
-        {
-            //txtReward.text = SpriteNumberManager.ToRed("0.00");
-            rewardAnimate.StartAnimate(SlotMachine.Instance.slotData.totalReward);
-        }
-        else
-        {
-            var format = string.Format("{0:#,#.00}", SlotMachine.Instance.slotData.totalReward);
-            txtReward.text = SpriteNumberManager.ToMeowWhite(format);
-        }
     }
     public void Show()
     {

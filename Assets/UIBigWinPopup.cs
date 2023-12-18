@@ -43,7 +43,6 @@ public class UIBigWinPopup : MonoBehaviour
     public void Show()
     {
         if (!Condition()) return;
-        //spineBigwin.gameObject.SetActive(true);
 
         isStart = true;
         isShowReward = false;
@@ -62,8 +61,6 @@ public class UIBigWinPopup : MonoBehaviour
         isStart = false;
         isShowReward = false;
         content.SetActive(false);
-        //spineBigwin.AnimationState.SetAnimation(0, "BigWin_Loop", false);
-        //spineBigwin.gameObject.SetActive(false);
 
         //Check for Free spin mode
         SlotMachine slot = SlotMachine.Instance;
@@ -84,23 +81,14 @@ public class UIBigWinPopup : MonoBehaviour
     }
     void ShowReward()
     {
-        //SoundManager.Instance.PlaySFX("CatMeow");
-        //SlotMachine.Instance.slotData = new BetModel();
         isShowReward = true;
         BetModel data = SlotMachine.Instance.slotData;
-/*        data.reward = 2500;
-        data.winRatio = 50;*/
-
-        //var formatedWallet = string.Format("WIN : {0:#,#.00}", data.reward);
-        //txtReward.text = formatedWallet;
         txtReward.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         txtReward.transform.DOScale(new Vector3(1,1,1),1.0f).SetEase(Ease.OutElastic);
-
         rewardAnim.StartAnimate(data.reward);
     }
     public bool Condition()
     {
-        return false;
         if (SlotMachine.Instance == null) return false;
         if (SlotMachine.Instance.slotData == null) return false;
         if (SlotMachine.Instance.slotData.reward == 0) return false;

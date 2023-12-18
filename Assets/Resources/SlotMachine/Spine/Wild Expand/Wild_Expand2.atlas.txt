@@ -1,0 +1,146 @@
+
+Wild_Expand2.png
+size: 2048, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Arm_L
+  rotate: true
+  xy: 688, 217
+  size: 276, 340
+  orig: 276, 340
+  offset: 0, 0
+  index: -1
+Arm_R
+  rotate: true
+  xy: 1112, 424
+  size: 161, 237
+  orig: 161, 237
+  offset: 0, 0
+  index: -1
+BG
+  rotate: false
+  xy: 1554, 484
+  size: 133, 536
+  orig: 133, 536
+  offset: 0, 0
+  index: -1
+Board
+  rotate: false
+  xy: 1689, 484
+  size: 133, 536
+  orig: 133, 536
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 2, 205
+  size: 684, 815
+  orig: 684, 881
+  offset: 0, 0
+  index: -1
+Eyeball_L
+  rotate: false
+  xy: 1994, 1009
+  size: 14, 11
+  orig: 15, 11
+  offset: 0, 0
+  index: -1
+Eyeball_R
+  rotate: false
+  xy: 1030, 463
+  size: 14, 11
+  orig: 15, 12
+  offset: 0, 0
+  index: -1
+Frame
+  rotate: false
+  xy: 1824, 494
+  size: 126, 526
+  orig: 133, 536
+  offset: 4, 5
+  index: -1
+Hair_1
+  rotate: true
+  xy: 538, 40
+  size: 20, 43
+  orig: 20, 43
+  offset: 0, 0
+  index: -1
+Hair_2
+  rotate: false
+  xy: 1952, 934
+  size: 15, 42
+  orig: 15, 42
+  offset: 0, 0
+  index: -1
+Hair_3
+  rotate: false
+  xy: 1030, 476
+  size: 56, 17
+  orig: 56, 17
+  offset: 0, 0
+  index: -1
+Hair_4
+  rotate: false
+  xy: 1952, 978
+  size: 40, 42
+  orig: 40, 42
+  offset: 0, 0
+  index: -1
+Hair_5
+  rotate: true
+  xy: 115, 25
+  size: 13, 45
+  orig: 15, 47
+  offset: 0, 0
+  index: -1
+Head
+  rotate: false
+  xy: 538, 62
+  size: 102, 141
+  orig: 105, 150
+  offset: 2, 0
+  index: -1
+Leg_R
+  rotate: false
+  xy: 1112, 587
+  size: 440, 433
+  orig: 440, 433
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 642, 170
+  size: 31, 33
+  orig: 34, 34
+  offset: 2, 0
+  index: -1
+Move
+  rotate: true
+  xy: 2, 40
+  size: 163, 534
+  orig: 164, 536
+  offset: 1, 1
+  index: -1
+Shoulder_R
+  rotate: true
+  xy: 1351, 390
+  size: 195, 197
+  orig: 195, 198
+  offset: 0, 0
+  index: -1
+Sword
+  rotate: false
+  xy: 688, 495
+  size: 422, 525
+  orig: 422, 526
+  offset: 0, 0
+  index: -1
+Wild
+  rotate: false
+  xy: 2, 2
+  size: 111, 36
+  orig: 111, 36
+  offset: 0, 0
+  index: -1
