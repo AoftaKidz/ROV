@@ -43,7 +43,7 @@ public class UIBigWinPopup : MonoBehaviour
     public void Show()
     {
         if (!Condition()) return;
-
+        time = 0;
         isStart = true;
         isShowReward = false;
         content.SetActive(true);
