@@ -34,7 +34,7 @@ public class LineManager : MonoBehaviour
                 {
                     if (SlotMachineScatterMode.Instance.isWildSpawning) return;
 
-                    _currTime += Time.deltaTime * _turbo;
+                    _currTime += Time.deltaTime;
                     if(_currTime > _delay)
                     {
                         _state = (int)LineManagerState.Animate;
@@ -295,5 +295,10 @@ public class LineManager : MonoBehaviour
                     return new List<int>() {0};
                 }
         }
+    }
+    public bool Busy()
+    {
+        if (_state == (int)LineManagerState.Create) return true;
+        else return false;
     }
 }

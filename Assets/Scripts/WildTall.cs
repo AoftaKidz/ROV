@@ -81,7 +81,6 @@ public class WildTall : MonoBehaviour
                     {
                         //Debug.Log("Wild Moving");
                         //Moving wild
-                        _state = (int)WildTallState.Idle;
                         _isMoving = true;
                         //_spineAnimation.AnimationName = animationNameMove;
                         _spineAnimation.AnimationState.SetAnimation(0, animationNameMove, false);
@@ -190,6 +189,7 @@ public class WildTall : MonoBehaviour
     }
     void MoveFinish()
     {
+        _state = (int)WildTallState.Idle;
         if (columnID > 0)
             Idle();
         else

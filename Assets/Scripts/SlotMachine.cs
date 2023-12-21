@@ -114,7 +114,7 @@ public class SlotMachine : MonoBehaviour
     }
     public void Spin()
     {
-        try
+     /*   try
         {
             GameObject[] wilds = GameObject.FindGameObjectsWithTag("WildTall");
             foreach (GameObject w in wilds)
@@ -125,7 +125,7 @@ public class SlotMachine : MonoBehaviour
         catch 
         {
             //Debug.Log("Not found WildTall.");
-        }
+        }*/
 
         PuzzleInfo.Instance.Hide();
 
@@ -400,6 +400,7 @@ public class SlotMachine : MonoBehaviour
     }
     void RandomTestData()
     {
+        CoolDown();
         API_Spin();
     }
     public void SetActivePuzzle(int index)
@@ -442,6 +443,21 @@ public class SlotMachine : MonoBehaviour
     }
     public bool Busy()
     {
+        //Line Manager 
+        if (LineManager.Instance.Busy()) return true;
+
+        try
+        {
+            GameObject[] wilds = GameObject.FindGameObjectsWithTag("WildTall");
+            foreach (GameObject w in wilds)
+            {
+                if (w.GetComponent<WildTall>().Busy()) return true;
+            }
+        }
+        catch
+        {
+        }
+
         if (isCooldown) return true;
 
         if (isSpinning)
@@ -476,7 +492,7 @@ public class SlotMachine : MonoBehaviour
     {
         if (isCooldown)
         {
-            _cooldownTime += Time.deltaTime;
+            _cooldownTime += Time.deltaTime * turbo;
             if (_cooldownTime > 0.5f)
             {
                 _cooldownTime = 0;

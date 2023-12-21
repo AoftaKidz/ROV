@@ -33,8 +33,11 @@ public class SlotMachineAutoSpin : MonoBehaviour
     {
         if (!SlotMachine.isAutoMode) return;
         if (!_isStart) return;
-        //if(!UIWinBetPopup.Instance.isAppear)
-        _currTime += Time.deltaTime;
+        if (UIBigWinPopup.Instance.Appear()) return;
+        if (UIKindOfMeowPopup.Instance.Appear()) return;
+        if (SlotMachine.Instance.Busy()) return;
+
+        _currTime += Time.deltaTime * SlotMachine.turbo;
         if(_currTime > _delay)
         {
             _current++;
