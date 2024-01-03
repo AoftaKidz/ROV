@@ -48,9 +48,9 @@ public class UIBigWinPopup : MonoBehaviour
         isShowReward = false;
         content.SetActive(true);
         SoundManager.Instance.PlaySFX("AllWin");
-        spineBigwin.AnimationState.SetAnimation(0, "BigWin_Idle", false);
-        spineBigwin.transform.localScale = Vector3.one / 2f;
-        spineBigwin.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
+        spineBigwin.AnimationState.SetAnimation(0, "BigWin_Start", false);
+        //spineBigwin.transform.localScale = Vector3.one / 2f;
+        //spineBigwin.transform.DOScale(Vector3.one, 0.6f).SetEase(Ease.OutElastic);
         txtReward.text = "";
         txtReward.transform.localScale = Vector3.zero;
 
@@ -81,6 +81,8 @@ public class UIBigWinPopup : MonoBehaviour
     }
     void ShowReward()
     {
+        spineBigwin.AnimationState.SetAnimation(0, "BigWin_Idle", false);
+
         isShowReward = true;
         BetModel data = SlotMachine.Instance.slotData;
         txtReward.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);

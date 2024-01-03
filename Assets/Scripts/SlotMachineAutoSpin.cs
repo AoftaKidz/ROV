@@ -47,6 +47,9 @@ public class SlotMachineAutoSpin : MonoBehaviour
     }
     public void StartAotuSpin(int count)
     {
+        double _b = UserProfile.Instance.wallet - UserProfile.Instance.betTotal;
+        if (_b < 0) return;
+
         SlotMachine.isAutoMode = true;
         _count = count;
         _current = 0;
@@ -58,7 +61,9 @@ public class SlotMachineAutoSpin : MonoBehaviour
     public void AutoSpin()
     {
         if (!SlotMachine.isAutoMode) return;
-        if(_current >= _count)
+        double _b = SlotMachine.Instance.slotData.userBalance - UserProfile.Instance.betTotal;
+
+        if (_current >= _count || _b < 0)
         {
             //End
             SlotMachine.isAutoMode = false;
