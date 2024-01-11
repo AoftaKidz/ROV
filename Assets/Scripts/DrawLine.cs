@@ -24,9 +24,9 @@ public class DrawLine : MonoBehaviour
         if (number == 1 || number == 2 || number == 3 || number == 10 || number == 11)
             offsetY = 0.0f;
         if (number == 4 || number == 7 || number == 9 || number == 12 || number == 14)
-            offsetY = 0.6f;
+            offsetY = 0.85f;
         if (number == 5 || number == 6 || number == 8 || number == 13 || number == 15)
-            offsetY = -0.6f;
+            offsetY = -0.85f;
         Vector3 rewardPos = Vector3.zero;
 
         foreach (int d in datas)

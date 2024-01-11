@@ -16,6 +16,7 @@ public class Puzzle : MonoBehaviour
     public int puzzleID = 0;
     public int dataID = 0;
 
+    public List<GameObject> spines;
     public GameObject spine;
     public GameObject dust;
     public GameObject bgMatch;
@@ -54,14 +55,18 @@ public class Puzzle : MonoBehaviour
     void Start()
     {
         // Spine
-        if(spine){
+        HideAllSpine();
+        dataID = Random.Range(0, 10);
+        //spine = spines[dataID];
+        SetPuzzleData();
+
+        /*if (spine){
             _spineAnimation = spine.GetComponent<SkeletonAnimation>();
-            _spineAnimation.AnimationState.SetAnimation(0, "Item_1", true);
+            _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
 
             //Random.seed(9999);
-            dataID = Random.Range(0,10);
             SetPuzzleData();
-        }
+        }*/
     }
     private void Awake()
     {
@@ -157,13 +162,13 @@ public class Puzzle : MonoBehaviour
     {
         if (!spine) return;
 
-        spine.SetActive(true);
+        SetPuzzleData();
+
         Vector3 p = spine.transform.localPosition;
         p.y = 0.5f;
         spine.transform.localPosition = p;
         spine.transform.DOLocalMoveY(0, bounceDuration).SetEase(Ease.OutElastic).OnComplete(BounceFinish);
         spine.transform.DORestart();
-        SetPuzzleData();
     }
     public void ShowMatch()
     {
@@ -246,12 +251,18 @@ public class Puzzle : MonoBehaviour
     public void SetPuzzleData()
     {
         //return;
+        HideAllSpine();
+
 
         if (_isInit)
         {
-            //bgMatch.SetActive(false);
-            //_spineAnimation.AnimationName = SlotMachine.Instance.GetSpineAnimationIdle(dataID);
-            _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
+            spine = spines[dataID];
+            spine.SetActive(true);
+            if (spine)
+            {
+                _spineAnimation = spine.GetComponent<SkeletonAnimation>();
+                _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
+            }
 
             _isInit = false;
             return;
@@ -261,6 +272,9 @@ public class Puzzle : MonoBehaviour
         {
             SlotMachine slot = SlotMachine.Instance;
             dataID = slot.slotData.data[puzzleID];
+            spine = spines[dataID];
+            spine.SetActive(true);
+            _spineAnimation = spine.GetComponent<SkeletonAnimation>();
 
             //Find match
             bool isMatch = false;
@@ -422,6 +436,13 @@ public class Puzzle : MonoBehaviour
             if (puzzleID == 7)
                 p.x = 0;
             PuzzleInfo.Instance.Show(p,dataID);
+        }
+    }
+    void HideAllSpine()
+    {
+        foreach(GameObject sp in spines)
+        {
+            sp.SetActive(false);
         }
     }
 }
