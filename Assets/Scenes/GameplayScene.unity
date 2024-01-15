@@ -42455,8 +42455,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 1324915586}
     m_Modifications:
     - target: {fileID: 4273118828208348307, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273118828208348307, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273118828208348307, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.z
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273118828208348307, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
       propertyPath: m_ResetScaleOnEnable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246189255706494744, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.x
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246189255706494744, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5246189255706494744, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
+      propertyPath: m_Scale3D.z
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5246189255706494744, guid: 6448f698e979f5841bfe473609ea94fe, type: 3}
       propertyPath: m_ResetScaleOnEnable
@@ -54888,6 +54912,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5743672147198353702, guid: 15c5a6001c211ef46aab790c85a1fed9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743672147198353702, guid: 15c5a6001c211ef46aab790c85a1fed9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7fc274a9b2adc3d439e82c0cd640336c, type: 2}
     - target: {fileID: 5903839958968059484, guid: 15c5a6001c211ef46aab790c85a1fed9, type: 3}
       propertyPath: m_Mesh
       value: 

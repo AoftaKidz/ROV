@@ -194,7 +194,7 @@ public class SlotMachine : MonoBehaviour
             case (int)SlotMachineID.Puzzle_5: return "Item_5_Match";
             case (int)SlotMachineID.Puzzle_Scatter: return "Scatter_Match";
             case (int)SlotMachineID.Puzzle_Wild: return "Wild_Match";
-            case (int)SlotMachineID.Puzzle_Collectable: return "Collectable_Match";
+            case (int)SlotMachineID.Puzzle_Collectable: return "Collectable";
 
         }
         return "";
@@ -313,7 +313,7 @@ public class SlotMachine : MonoBehaviour
 
             SoundManager.Instance.PlaySFX("SlotSpin", true);
             SoundManager.Instance.PlaySFX("Spin_Button");
-
+            //slotData.data[0] = (int)SlotMachine.SlotMachineID.Puzzle_Collectable;
             //Update wallet 
             if (!slotData.isScatterMode)
             {

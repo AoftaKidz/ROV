@@ -51,22 +51,17 @@ public class Puzzle : MonoBehaviour
     bool isAnimateMatch = false;
     public float animateMatchDuration = 3f;
 
-    // Start is called before the first frame update
+    //Collectable
+    float _collectableTime = 0;
+    float _collectableSpawnTime = 1;
+    bool _isCollectable = false;
+
     void Start()
     {
         // Spine
         HideAllSpine();
         dataID = Random.Range(0, 10);
-        //spine = spines[dataID];
         SetPuzzleData();
-
-        /*if (spine){
-            _spineAnimation = spine.GetComponent<SkeletonAnimation>();
-            _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
-
-            //Random.seed(9999);
-            SetPuzzleData();
-        }*/
     }
     private void Awake()
     {
@@ -113,7 +108,6 @@ public class Puzzle : MonoBehaviour
             {
                 _currTime = 0;
                 _isDelaySpineTimeScale = false;
-                //_spineAnimation.timeScale = 1;
             }
         }
 
@@ -124,16 +118,16 @@ public class Puzzle : MonoBehaviour
             {
                 _time = 0;
                 isAnimateMatch = false;
-                /*if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Cat01)
-                    _spineAnimation.AnimationState.SetAnimation(0, "Meow1_Armor_Idle", true);
-                else if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Cat02)
-                    _spineAnimation.AnimationState.SetAnimation(0, "Meow2_Armor_Idle", true);
-                else if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Cat03)
-                    _spineAnimation.AnimationState.SetAnimation(0, "Meow3_Armor_Idle", true);
-                else if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Cat04)
-                    _spineAnimation.AnimationState.SetAnimation(0, "Meow4_Armor_Idle", true);
-                else if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Cat05)
-                    _spineAnimation.AnimationState.SetAnimation(0, "Meow5_Armor_Idle", true);*/
+            }
+        }
+
+        if (_isCollectable)
+        {
+            _collectableTime += Time.deltaTime;
+            if( _collectableTime > _collectableSpawnTime)
+            {
+                _isCollectable = false;
+                _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
             }
         }
     }
@@ -200,8 +194,6 @@ public class Puzzle : MonoBehaviour
             {
                 if (_isMatch)
                 {
-                    //bgMatch.SetActive(true);
-                    //_spineAnimation.AnimationName = SlotMachine.Instance.GetSpineAnimationMatch(dataID);
                     _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationMatch(dataID), true);
                     spine.transform.localScale = new Vector2(0.8f, 0.8f);
                     spine.transform.DOScale(new Vector2(1.0f, 1.0f), 1).SetEase(Ease.OutElastic);
@@ -211,8 +203,6 @@ public class Puzzle : MonoBehaviour
                 else
                 {
                     SetAlpha(0.5f);
-                    //bgMatch.SetActive(false);
-                    //_spineAnimation.AnimationName = SlotMachine.Instance.GetSpineAnimationIdle(dataID);
                     _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
 
                 }
@@ -220,6 +210,16 @@ public class Puzzle : MonoBehaviour
         }
         else
         {
+            if (dataID == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
+            {
+                if(_isMatch)
+                    SetAlpha(0.5f);
+                else
+                    SetAlpha(1);
+
+                //_spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
+            }
+            else
             if (_isMatch)
             {
                 //bgMatch.SetActive(true);
@@ -294,15 +294,23 @@ public class Puzzle : MonoBehaviour
                 }
             }
             _isDelaySpineTimeScale = true;
-            //_spineAnimation.timeScale = 12;
             isAnimateMatch = false;
             _time = 0;
             isDelayShowMatch = true;
             _isMatch = isMatch;
-            //bgMatch.SetActive(false);
             SetAlpha(1);
-            //_spineAnimation.AnimationName = slot.GetSpineAnimationIdle(dataID);
-            _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
+            if(dataID == (int)SlotMachine.SlotMachineID.Puzzle_Collectable)
+            {
+                string n = SlotMachine.Instance.GetSpineAnimationIdle(dataID) + "_Spawn";
+                _spineAnimation.AnimationState.SetAnimation(0, n, true);
+                _isCollectable = true;
+                _collectableTime = 0;
+            }
+            else
+            {
+                _isCollectable = false;
+                _spineAnimation.AnimationState.SetAnimation(0, SlotMachine.Instance.GetSpineAnimationIdle(dataID), true);
+            }
 
             if (slot.slotData.matches.Count > 0)
             {

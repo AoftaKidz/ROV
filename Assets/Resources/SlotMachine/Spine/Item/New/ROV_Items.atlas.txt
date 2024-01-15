@@ -4,219 +4,268 @@ size: 2048, 2048
 format: RGBA8888
 filter: Linear, Linear
 repeat: none
-COLLECTABLE
+Collectable/Frame_Gem
   rotate: false
-  xy: 2, 1088
+  xy: 437, 1503
+  size: 182, 244
+  orig: 182, 244
+  offset: 0, 0
+  index: -1
+Collectable/Gem
+  rotate: false
+  xy: 1765, 1844
+  size: 243, 200
+  orig: 243, 204
+  offset: 0, 2
+  index: -1
+Collectable/Txt_Collectable
+  rotate: false
+  xy: 437, 1418
+  size: 180, 83
+  orig: 183, 87
+  offset: 1, 2
+  index: -1
+Frame
+  rotate: false
+  xy: 2, 1089
   size: 240, 306
   orig: 242, 308
   offset: 1, 1
   index: -1
-Frame
-  rotate: true
-  xy: 1155, 1806
-  size: 237, 303
-  orig: 238, 304
-  offset: 1, 0
-  index: -1
 Frame_Effect
   rotate: true
-  xy: 507, 1771
+  xy: 507, 1772
   size: 272, 338
   orig: 282, 348
   offset: 5, 5
   index: -1
+Frame_Line
+  rotate: false
+  xy: 244, 1107
+  size: 219, 288
+  orig: 219, 288
+  offset: 0, 0
+  index: -1
 Item_2/Arm_R_02
   rotate: false
-  xy: 722, 907
+  xy: 1026, 1537
   size: 156, 73
   orig: 156, 75
   offset: 0, 0
   index: -1
 Item_2/Bandana_Bot
-  rotate: true
-  xy: 722, 813
+  rotate: false
+  xy: 1920, 1738
   size: 92, 104
   orig: 92, 104
   offset: 0, 0
   index: -1
 Item_2/Bandana_Top
-  rotate: true
-  xy: 1093, 1435
+  rotate: false
+  xy: 1226, 1568
   size: 61, 57
   orig: 70, 57
   offset: 0, 0
   index: -1
 Item_2/Body_02
   rotate: false
-  xy: 2, 1396
+  xy: 2, 1397
   size: 433, 350
   orig: 433, 350
   offset: 0, 0
   index: -1
 Item_2/Brim
   rotate: false
-  xy: 722, 1112
+  xy: 1765, 1692
   size: 153, 150
   orig: 154, 171
   offset: 1, 0
   index: -1
 Item_2/Collar
-  rotate: false
-  xy: 924, 1302
+  rotate: true
+  xy: 1920, 1673
   size: 63, 100
   orig: 63, 100
   offset: 0, 0
   index: -1
 Item_2/Eye
-  rotate: false
-  xy: 209, 159
+  rotate: true
+  xy: 1210, 1612
   size: 13, 9
   orig: 13, 9
   offset: 0, 0
   index: -1
 Item_2/Hair
-  rotate: false
-  xy: 437, 1410
+  rotate: true
+  xy: 2010, 1885
   size: 39, 31
   orig: 39, 31
   offset: 0, 0
   index: -1
 Item_2/Hat_Top
   rotate: false
-  xy: 1015, 1428
+  xy: 1839, 1622
   size: 76, 68
   orig: 77, 68
   offset: 1, 0
   index: -1
 Item_2/Head_02
-  rotate: false
-  xy: 924, 1404
+  rotate: true
+  xy: 1745, 1601
   size: 89, 92
   orig: 89, 92
   offset: 0, 0
   index: -1
 Item_2/Jacket_L
   rotate: false
-  xy: 2, 1748
+  xy: 2, 1749
   size: 503, 295
   orig: 503, 368
   offset: 0, 68
   index: -1
 Item_2/Jacket_R
   rotate: true
-  xy: 2, 2
+  xy: 2, 6
   size: 166, 205
   orig: 166, 205
   offset: 0, 0
   index: -1
 Item_2/Rowel
   rotate: false
-  xy: 722, 1264
+  xy: 465, 1216
   size: 200, 200
   orig: 201, 201
   offset: 1, 0
   index: -1
 Item_2/Shoulder_L
-  rotate: false
-  xy: 722, 982
+  rotate: true
+  xy: 209, 21
   size: 151, 128
   orig: 151, 128
   offset: 0, 0
   index: -1
 Item_2/feather
   rotate: false
-  xy: 2004, 1925
+  xy: 2010, 1926
   size: 34, 118
   orig: 34, 118
   offset: 0, 0
   index: -1
-SCATTER
+Letter_10
+  rotate: false
+  xy: 857, 1617
+  size: 193, 185
+  orig: 201, 270
+  offset: 4, 43
+  index: -1
+Letter_9
+  rotate: false
+  xy: 1052, 1612
+  size: 156, 190
+  orig: 201, 270
+  offset: 23, 32
+  index: -1
+Letter_A
+  rotate: false
+  xy: 1385, 1629
+  size: 171, 176
+  orig: 201, 270
+  offset: 15, 47
+  index: -1
+Letter_J
   rotate: true
-  xy: 847, 1803
-  size: 240, 306
-  orig: 242, 308
-  offset: 1, 1
+  xy: 1558, 1648
+  size: 157, 185
+  orig: 201, 270
+  offset: 22, 42
+  index: -1
+Letter_K
+  rotate: false
+  xy: 1210, 1627
+  size: 173, 178
+  orig: 201, 270
+  offset: 14, 46
+  index: -1
+Letter_Q
+  rotate: true
+  xy: 465, 1045
+  size: 169, 198
+  orig: 201, 270
+  offset: 16, 36
+  index: -1
+Scatter/Frame_Scatter
+  rotate: false
+  xy: 621, 1526
+  size: 180, 244
+  orig: 180, 244
+  offset: 0, 0
+  index: -1
+Scatter/Trophy_1
+  rotate: true
+  xy: 857, 1545
+  size: 70, 167
+  orig: 70, 167
+  offset: 0, 0
+  index: -1
+Scatter/Trophy_2
+  rotate: true
+  xy: 1917, 1631
+  size: 40, 71
+  orig: 40, 71
+  offset: 0, 0
+  index: -1
+Scatter/Trophy_3
+  rotate: false
+  xy: 1184, 1539
+  size: 40, 71
+  orig: 40, 71
+  offset: 0, 0
+  index: -1
+Scatter/Txt_Scatter
+  rotate: true
+  xy: 803, 1552
+  size: 218, 52
+  orig: 222, 55
+  offset: 3, 1
   index: -1
 Symbol_01
   rotate: false
-  xy: 2, 475
+  xy: 2, 784
   size: 237, 303
   orig: 239, 305
   offset: 1, 1
   index: -1
 Symbol_02
   rotate: true
-  xy: 1460, 1806
+  xy: 1155, 1807
   size: 237, 303
   orig: 239, 305
   offset: 1, 1
   index: -1
 Symbol_03
   rotate: false
-  xy: 2, 170
+  xy: 2, 479
   size: 237, 303
   orig: 239, 305
   offset: 1, 1
   index: -1
 Symbol_04
-  rotate: false
-  xy: 244, 1091
+  rotate: true
+  xy: 1460, 1807
   size: 237, 303
   orig: 239, 305
   offset: 1, 1
   index: -1
 Symbol_05
   rotate: false
-  xy: 244, 786
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_10
-  rotate: false
-  xy: 1765, 1740
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_9
-  rotate: false
-  xy: 437, 1443
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_A
-  rotate: false
-  xy: 676, 1466
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_J
-  rotate: false
-  xy: 915, 1498
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_K
-  rotate: false
-  xy: 483, 1138
-  size: 237, 303
-  orig: 239, 305
-  offset: 1, 1
-  index: -1
-Symbol_Q
-  rotate: false
-  xy: 483, 833
+  xy: 2, 174
   size: 237, 303
   orig: 239, 305
   offset: 1, 1
   index: -1
 WILD
-  rotate: false
-  xy: 2, 780
+  rotate: true
+  xy: 847, 1804
   size: 240, 306
   orig: 242, 308
   offset: 1, 1
