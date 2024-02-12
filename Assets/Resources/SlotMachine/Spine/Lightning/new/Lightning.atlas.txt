@@ -1,0 +1,55 @@
+
+Lightning.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+Bolth_1
+  rotate: true
+  xy: 114, 292
+  size: 66, 328
+  orig: 68, 330
+  offset: 1, 1
+  index: -1
+Bolth_2
+  rotate: true
+  xy: 114, 218
+  size: 72, 305
+  orig: 74, 307
+  offset: 1, 1
+  index: -1
+Bolth_3
+  rotate: true
+  xy: 114, 360
+  size: 87, 333
+  orig: 89, 335
+  offset: 1, 1
+  index: -1
+Bolth_4
+  rotate: false
+  xy: 2, 120
+  size: 110, 327
+  orig: 112, 329
+  offset: 1, 1
+  index: -1
+Bolth_5
+  rotate: true
+  xy: 114, 140
+  size: 76, 230
+  orig: 78, 232
+  offset: 1, 1
+  index: -1
+Bolth_6
+  rotate: true
+  xy: 114, 83
+  size: 55, 232
+  orig: 57, 235
+  offset: 1, 1
+  index: -1
+Bolth_7
+  rotate: false
+  xy: 2, 26
+  size: 33, 92
+  orig: 36, 98
+  offset: 2, 1
+  index: -1

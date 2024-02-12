@@ -1,0 +1,111 @@
+
+ROV_Items.png
+size: 2048, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+COLLECTABLE
+  rotate: false
+  xy: 2, 310
+  size: 240, 306
+  orig: 242, 308
+  offset: 1, 1
+  index: -1
+Frame_Effect
+  rotate: false
+  xy: 2, 618
+  size: 272, 338
+  orig: 282, 348
+  offset: 5, 5
+  index: -1
+SCATTER
+  rotate: false
+  xy: 276, 650
+  size: 240, 306
+  orig: 242, 308
+  offset: 1, 1
+  index: -1
+Symbol_01
+  rotate: false
+  xy: 518, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_02
+  rotate: false
+  xy: 757, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_03
+  rotate: false
+  xy: 996, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_04
+  rotate: false
+  xy: 1235, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_05
+  rotate: false
+  xy: 1474, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_10
+  rotate: false
+  xy: 1713, 653
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_9
+  rotate: false
+  xy: 244, 313
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_A
+  rotate: false
+  xy: 244, 8
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_J
+  rotate: true
+  xy: 518, 414
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_K
+  rotate: true
+  xy: 823, 414
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+Symbol_Q
+  rotate: true
+  xy: 1128, 414
+  size: 237, 303
+  orig: 239, 305
+  offset: 1, 1
+  index: -1
+WILD
+  rotate: false
+  xy: 2, 2
+  size: 240, 306
+  orig: 242, 308
+  offset: 1, 1
+  index: -1

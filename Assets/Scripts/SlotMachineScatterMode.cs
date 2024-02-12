@@ -7,10 +7,10 @@ using Spine.Unity;
 public class SlotMachineScatterMode : MonoBehaviour
 {
 
-   /* static public event Action<int> OnAutoSpin;
-    static public event Action OnStopAutoSpin;
-    static public event Action<int> OnEndterAutoSpin;*/
-   enum ScatterState
+    /* static public event Action<int> OnAutoSpin;
+     static public event Action OnStopAutoSpin;
+     static public event Action<int> OnEndterAutoSpin;*/
+    enum ScatterState
     {
         None = 0,
         Start,
@@ -55,7 +55,7 @@ public class SlotMachineScatterMode : MonoBehaviour
     }
     private void Start()
     {
-
+        //TestThunder();
     }
     private void Update()
     {
@@ -72,15 +72,15 @@ public class SlotMachineScatterMode : MonoBehaviour
             case ScatterState.Start:
                 {
                     _time += Time.deltaTime;
-                    if(_time > 0.3f)
+                    if (_time > 0.3f)
                     {
                         _time = 0;
                         _state = ScatterState.WaitForSpin;
 
-/*                        if (SlotMachine.Instance.slotData.wildSpawnIndex < 0)
-                            _state = ScatterState.WaitForSpin;
-                        else
-                            _state = ScatterState.SpawnWildPuzzle;*/
+                        /*                        if (SlotMachine.Instance.slotData.wildSpawnIndex < 0)
+                                                    _state = ScatterState.WaitForSpin;
+                                                else
+                                                    _state = ScatterState.SpawnWildPuzzle;*/
                     }
                     break;
                 }
@@ -109,7 +109,7 @@ public class SlotMachineScatterMode : MonoBehaviour
                             puzzle = Instantiate(prefabPuzzle, p, Quaternion.identity);
                             //SlotMachine.Instance.SetActivePuzzle(SlotMachine.Instance.slotData.wildSpawnIndex);
                             Vector3 pos = SlotMachine.Instance.puzzles[SlotMachine.Instance.slotData.wildSpawnIndex].transform.position; //SlotMachine.activePuzzle.transform.position;
-                           
+
 
                             puzzle.transform.localScale = Vector3.zero;
                             puzzle.transform.DOScale(0, 0.5f).SetEase(Ease.OutElastic).OnComplete(() =>
@@ -121,17 +121,17 @@ public class SlotMachineScatterMode : MonoBehaviour
 
                                 //particleThunder.transform.position = pos;
                                 SoundManager.Instance.PlaySFX("WildShot");
-                                
+
                                 {
                                     SoundManager.Instance.PlaySFX("Lightning");
                                     spawnWildSaberEffect.SetActive(true);
                                     thunder.SetActive(true);
                                     Vector3 o = spawnWildSaberEffect.transform.position;
                                     Vector3 p = pos - spawnWildSaberEffect.transform.position;
-                                    float deg = 180f + Mathf.Atan2(p.y, p.x) * Mathf.Rad2Deg;
+                                    float deg = Mathf.Atan2(p.y, p.x) * Mathf.Rad2Deg;/*180f + */
                                     /*if (deg > 0)
                                         deg = -deg;*/
-                                    Debug.Log("Degree : " + deg);
+                                   // Debug.Log("Degree : " + deg);
 
                                     Quaternion rot = new Quaternion();
                                     rot.eulerAngles = new Vector3(0, 0, deg);
@@ -139,15 +139,15 @@ public class SlotMachineScatterMode : MonoBehaviour
                                     //thunder.transform.rotation = rot;
                                     {
                                         float _s = CalculateThunderScale(pos);
-                                        Vector3 s = new Vector3(_s,_s,_s);
+                                        Vector3 s = new Vector3(_s, _s, _s);
                                         thunder.transform.localScale = s;
-                                        thunder.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"Lightning_Activate", false);
+                                        thunder.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, "animation", false);
                                     }
 
                                     //spawnWildSaberEffect.transform.DOMove(pos, 0.5f).SetEase(Ease.InQuint).OnComplete(() => {
                                     spawnWildSaberEffect.transform.DOMove(o, 0.5f).SetEase(Ease.InQuint).OnComplete(() => {
-                                            spawnWildSaberEffect.SetActive(false);
-                                            thunder.SetActive(false);
+                                        spawnWildSaberEffect.SetActive(false);
+                                        thunder.SetActive(false);
                                         spawnWildSaberEffect.transform.position = o;
 
                                         puzzle.transform.DOMove(pos, 0.0f).SetEase(Ease.OutQuint).OnComplete(() =>
@@ -167,7 +167,7 @@ public class SlotMachineScatterMode : MonoBehaviour
                                             slotColumn.CreateWildTall(true);
                                         });
 
-                                    }); 
+                                    });
                                 }
                                 /*puzzle.transform.DOMove(pos, 0.0f).SetEase(Ease.OutQuint).OnComplete(() => {
                                     _state = ScatterState.SpawnWildTall;
@@ -184,10 +184,10 @@ public class SlotMachineScatterMode : MonoBehaviour
                                     slotColumn.CreateWildTall(true);
                                 });*/
                             });
-                            
+
                         }
                     }
-                    
+
                     break;
                 }
             case ScatterState.SpawnWildTall:
@@ -378,13 +378,39 @@ public class SlotMachineScatterMode : MonoBehaviour
     }
     float CalculateThunderScale(Vector2 pos)
     {
-        Vector2 _d1 = new Vector2(4.26f,6.48f);
-        Vector2 _d2 = new Vector2(-2.84f, 3.85f);
+        Vector2 _d1 = new Vector2(4.26f, 6.48f);
+        Vector2 _d2 = new Vector2(14f, 6.48f);
         float _dst = (_d2 - _d1).magnitude;
         float _sc = 3.1f;
 
         float _dst2 = (pos - _d1).magnitude;
 
         return _dst2 * _sc / _dst;
+    }
+    void TestThunder()
+    {
+        int puzzleID = 14;
+        Vector3 pos = SlotMachine.Instance.puzzles[puzzleID].transform.position;
+
+
+        spawnWildSaberEffect.SetActive(true);
+        thunder.SetActive(true);
+        Vector3 o = spawnWildSaberEffect.transform.position;
+        Vector3 p = pos - spawnWildSaberEffect.transform.position;
+        float deg = Mathf.Atan2(p.y, p.x) * Mathf.Rad2Deg;/*180f + */
+        /*if (deg > 0)
+            deg = -deg;*/
+        Debug.Log("Degree : " + deg);
+
+        Quaternion rot = new Quaternion();
+        rot.eulerAngles = new Vector3(0, 0, deg);
+        spawnWildSaberEffect.transform.rotation = rot;
+        //thunder.transform.rotation = rot;
+        {
+            float _s = CalculateThunderScale(pos);
+            Vector3 s = new Vector3(_s, _s, _s);
+            thunder.transform.localScale = s;
+            thunder.GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0, "animation", true);
+        }
     }
 }
